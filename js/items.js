@@ -3,6 +3,8 @@ this.stats = stats;
 this.prepareTooltip = prepareTooltip;
 this.step = 0;
 }
+
+
 function createShopItem(name, step){
 		item = new Object();
 		item.step = step;
@@ -10,8 +12,8 @@ function createShopItem(name, step){
 		item.currentstats = item.stages[step].stats;
 }
 
-
 function createItemImage(name, rank){
+//Creates an dom object for the item name and rank specified
 
 		urlprefix = "images/items/";
 		urlsuffix = ".png"
@@ -2797,62 +2799,75 @@ function createItem(string){
 }
 
 function createItemHeader(item){
-//item pictures are not appending in the correct spot
-//revisit this
-	var table = document.createElement('table');
-	var itemnamerow = document.createElement('tr');
+//Creates the top half of the item description html - the table that contains the name, image, and gold values
+
 	
-	var itemnamecell = document.createElement('td');
-	itemnamecell.setAttribute('class', "itemname");
-	itemnamecell.setAttribute('colspan', "3");
-	itemnamecell.setAttribute('align', "center");
-	var text = document.createElement('strong');
+	//Creates the Item name row 
 	
-	text.innerHTML = item.name + "[" + item.level + "]";
-	itemnamecell.appendChild(text);
-	itemnamerow.appendChild(itemnamecell);
-	table.appendChild(itemnamerow);
+	var itemNameRow = document.createElement('tr');
+	var itemNameTD = document.createElement('td');
+	itemNameTD.setAttribute('class', "itemname");
+	itemNameTD.setAttribute('colspan', "3");
+	itemNameTD.setAttribute('align', "center");
 	
-	var buyrow = document.createElement('tr');
+	var nameSpan = document.createElement('strong');
+	nameSpan.innerHTML = item.name + "[" + item.level + "]";
 	
-	var imagecell = document.createElement('td');
-	imagecell.appendChild(item.image);
-	imagecell.setAttribute('rowspan', "2");
+	itemNameTD.appendChild(nameSpan);
+	itemNameRow.appendChild(itemNameTD);
 	
 	
 	
-	var buycell = document.createElement('td');
-	buycell.setAttribute('style', "color:#CCCC52");
-	buycell.innerHTML = item.stats.buy;
-	var buylabelcell = document.createElement('td');
+	//Creates the image, is Appending to the same row as Buy
+	var imageTD = document.createElement('td');
+	imageTD.appendChild(item.image);
+	imageTD.setAttribute('rowspan', "2");
 	
-	buylabelcell.innerHTML = "Buy Price";
+	//Buy row setup & appending
 	
-	buyrow.appendChild(imagecell);
-	buyrow.appendChild(buycell);
-	buyrow.appendChild(buylabelcell);
+	var buyValueTD = document.createElement('td');
+	buyValueTD.setAttribute('style', "color:#CCCC52");
+	buyValueTD.innerHTML = item.stats.buy;
+	var buyLabelTD = document.createElement('td');
+	buyLabelTD.innerHTML = "Buy Price";
 	
-	var sellrow = document.createElement('tr');
-	var sellcell = document.createElement('td');
-	sellcell.setAttribute('style', "color:#CCCC52");
-	if (item.stats['sell'] != undefined) { sellcell.innerHTML = item.stats.sell; }
-	var selllabelcell = document.createElement('td');
-	selllabelcell.innerHTML = "Sell Price"
+	var buyRow = document.createElement('tr');
+	buyRow.appendChild(imageTD);				//Image is appended here
+	buyRow.appendChild(buyValueTD);
+	buyRow.appendChild(buyLabelTD);
+	
+	// Sell row setup & Appending
+	
+	var sellValueTD = document.createElement('td');
+	sellValueTD.setAttribute('style', "color:#CCCC52");
+	if (item.stats['sell'] != undefined) { sellValueTD.innerHTML = item.stats.sell; }
+	var sellLabelTD = document.createElement('td');
+	sellLabelTD.innerHTML = "Sell Price"
 		
-	sellrow.appendChild(sellcell);
-	sellrow.appendChild(selllabelcell);
-	table.appendChild(buyrow);
+	var sellrow = document.createElement('tr');
+	sellrow.appendChild(sellValueTD);
+	sellrow.appendChild(sellLabelTD);
+	
+	//Table creation and appending the objects made above
+	
+	var table = document.createElement('table');
+	table.appendChild(itemNameRow);
+	table.appendChild(buyRow);
 	table.appendChild(sellrow);
+	
 	return table;
 
 }
+
+//Creates both the full tooltip and the brief tooltip for display
 function createItemTooltip(currentitem){
 	
 //Full Tooltip	
 	var header = createItemHeader(currentitem);
 	header.setAttribute('style', 'width: 100%')
 	var stats = createStatSpan(currentitem.stats, false);
-	//stats.setAttribute('class', 'tooltip');
+	
+	//Checks and creates text spans for any item effects
 	if (currentitem.effect1 != undefined ){
 		var space = document.createElement('br');
 		var effect = createItemEffectSpan(currentitem.effect1, false);
@@ -2872,7 +2887,6 @@ function createItemTooltip(currentitem){
 	complete.appendChild(stats);
 	complete.setAttribute('style', 'width: 100%');
 	
-	//return complete;
 
 //Condensed Tooltip
 	var row = document.createElement('tr');
@@ -2882,7 +2896,15 @@ function createItemTooltip(currentitem){
 	picture.appendChild(img);
 	row.appendChild(picture);
 	
-	var condensedStats = createStatSpan(currentitem.stats, true);
+	
+	//TODO
+	//This code should probably be rewritten to create the condensed tooltip while the full tooltip is running
+	//The if statements are a bit redundant
+	
+	
+	var condensedStats = createStatSpan(currentitem.stats, true);  
+	
+	//checks for any effects, and lists names of effects if present
 	if (currentitem.effect1 != undefined ){
 		var space = document.createElement('br');
 		var effect = createItemEffectSpan(currentitem.effect1, true);
@@ -2897,15 +2919,20 @@ function createItemTooltip(currentitem){
 
 	}
 	var condensedStatsData = document.createElement('td');
-		condensedStatsData.appendChild(condensedStats);
-		row.appendChild(condensedStatsData);
-		var table = new Object();
-		table.full = complete;
-		table.condensed = row;
+	condensedStatsData.appendChild(condensedStats);
+	row.appendChild(condensedStatsData);
 	
-		return table;
+	//Creates a table object and stuffs both the full and condensed stat lists inside before returning it
+	
+	var table = new Object();
+	table.full = complete;
+	table.condensed = row;
+
+	return table;
 }
 function createStatSpan(stats, isCondensed){
+//Creates the block of text for item statistics. The order of the If statements ensures that the stats will be listed in the same order as in game.
+
 		statistics = document.createElement('span');
 		if ( stats['movespeed'] != undefined){
 			var string = "+ " + stats.movespeed + " Move Speed"+ "<br>";
@@ -2983,32 +3010,35 @@ function createStatSpan(stats, isCondensed){
 		
 		return statistics;
 }
+
 function createShop(){
+//Populates the shop based on what filters are active in the dom
+
+	//creates the table and rows
 	var table = document.createElement('table');
 	var row = new Array();
 	
-	
+	//Checking for which item shop list to retrieve
 	if ($("#coast_city").attr('checked')){
 		var items = getCCItemList();
 	} else if ($("#gotham_heights").attr('checked')) {
 		var items = getGHItemList();
 	}
 	
+	//Small function to check is a number is odd - Used later for inserting a break every 2 rows
 	function isOdd(num) { 
 		var temp = num % 2;
 		if (temp == 1){ return true;}
 		if (temp == 0){ return false;}
 	}
 
+	//populates the table with items that are valid with the current filter settings
 	for (var i = 0; i < items.length; i++){
 		row[i] = document.createElement('tr')
 		for (var y = 0; y < items[i].length; y++){
 			
 			var iteminfo = createItem(items[i][y]);
 			var isIncluded = filter(iteminfo);
-			//var max = iteminfo.length;
-			//max -= 1;
-			//document.write(items[1][3]);
 			if (isIncluded != true) {iteminfo = createItem("blank");}
 			var pic = iteminfo[0].image.cloneNode(false);
 			if (iteminfo[0].name == "blank"){
@@ -3021,6 +3051,8 @@ function createShop(){
 			row[i].appendChild(pic);
 			}
 		table.appendChild(row[i]);
+		
+		//Adds a blank line to the table to space items every other row
 		if (isOdd(i)){
 			var databreak = document.createElement('td');
 			var rowbreak = document.createElement('tr');
@@ -3032,12 +3064,14 @@ function createShop(){
 	}
 	var space = document.createElement('br');
 	table.appendChild(space);
+	
+	//Jquery is used to delegate click functions to each of the items in the table so that they can be identified later
 	$("table").delegate("img.shopitem","click", function(event){
 			var newitem = createItem(event.target.id);
 		 for (var i = 0; i < newitem.length; i++){
 				newitem[i].image.setAttribute('id', newitem[i].name + newitem[i].level);
 			}
-		var newtable = createTable(newitem)
+		var newtable = createCondensedTable(newitem)
 		$("#full").html("");
 		$("#condensed").html("");
 		$("#condensed").append(newtable);
@@ -3047,169 +3081,176 @@ function createShop(){
 			
 }
 function filter(item){
-	var checks = new Array();
+	//This function checks the item passed into it against the active filters on the HTML page.
+	var filterCheck = new Array();
 	if ($("#attackdamage").is(':checked')){
 		if (checkItemStats(item, "attackdamage") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#attackpenetration").is(':checked')){
 		if (checkItemStats(item, "attackpenetration") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#attackspeed").is(':checked')){
 		if (checkItemStats(item, "attackspeed") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#attacklifesteal").is(':checked')){
 		if (checkItemStats(item, "attacklifesteal") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#criticalchance").is(':checked')){
 		if (checkItemStats(item, "criticalchance") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#health").is(':checked')){
 		if (checkItemStats(item, "health") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#healthregen").is(':checked')){
 		if (checkItemStats(item, "healthregen") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#attackarmor").is(':checked')){
 		if (checkItemStats(item, "attackarmor") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#powerarmor").is(':checked')){
 		if (checkItemStats(item, "powerarmor") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#resilience").is(':checked')){
 		if (checkItemStats(item, "resilience") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}	
 	
 	if ($("#powerdamage").is(':checked')){
 		if (checkItemStats(item, "powerdamage") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#powerpenetration").is(':checked')){
 		if (checkItemStats(item, "powerpenetration") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#powerlifesteal").is(':checked')){
 		if (checkItemStats(item, "powerlifesteal") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#will").is(':checked')){
 		if (checkItemStats(item, "will") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#willregen").is(':checked')){
 		if (checkItemStats(item, "willregen") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#movespeed").is(':checked')){
 		if (checkItemStats(item, "movespeed") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	
 	if ($("#cooldown").is(':checked')){
 		if (checkItemStats(item, "cdr") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
 	if ($("#credits").is(':checked')){
 		if (checkItemStats(item, "credits") == false){
-		checks.push(false);
+		filterCheck.push(false);
 		}else{
-		checks.push(true);
+		filterCheck.push(true);
 		}
 	}
+	
+	
+	
 	var isIncluded = true;
-	if (checks != undefined){
-		for (var i = 0; i < checks.length; i++)
+	if (filterCheck != undefined){
+		for (var i = 0; i < filterCheck.length; i++)
 		{
-			if (checks[i] == false){
+			if (filterCheck[i] == false){
 				isIncluded = false;
 			}
 		}
 	}
+	
 	return isIncluded;
 }
 
 function checkItemStats(item, statname){
+//Checks for the presence of stats within an item
+
 	var match = false;
 	for (var i = 0; i < item.length; i++){
 		if(item[i].stats[statname] != undefined){
 			match = true;
 		}
 		
-		//effect check
+//Checks the effects for items that will affect the sent stat.
 		if (item[i]['effect1'] != undefined){
 			if (item[i].effect1['tags'] != undefined){
 				for (var y = 0; y < item[i].effect1.tags.length; y++){
@@ -3234,6 +3275,9 @@ function checkItemStats(item, statname){
 return match;
 }
 function getCCItemList(){
+//A list of items in Coast City
+//This section should eventually be in a different file once item conversions are done
+
 var items = new Array();
 items[0] = [	"Nil Weapon", 				"Atlantis Gambit", 		"Promethium Mace", 			"Zeiss Goggles", 
 				"Joker's Crowbar", 			"Lobo's Chain", 		"Huntress' Crossbow",		"Mega Rod", 
@@ -3269,6 +3313,10 @@ return items;
 }
 
 function getGHItemList(){
+
+//A list of items in Gotham Heights
+//This section should eventually be in a different file once item conversions are done
+
 var items = new Array();
 items[0] = [	"Nil Weapon", 				"Coda Blade", 			"Cheetah's Claw", 			"Shade's Cane", 	 
 				"Joker's Crowbar", 			"Lobo's Chain", 		"Huntress' Crossbow",		"Mega Rod", 
@@ -3310,22 +3358,24 @@ return items;
 }
 
 function createItemEffectSpan(effect, isCondensed){
-		
-		var name = document.createElement('strong');
-		name.innerHTML = effect.name;
-		name.setAttribute('style', "color:#CC00FF");
-		
-		line = document.createElement('span');
-		line.appendChild(name);
-		if (isCondensed == false){
-		line.innerHTML += ":  " + effect.desc;
-		line.setAttribute('style', "color:#FFFFFF");
-		}
-		return line;
-		
-	}	
+	//Formats the item effect description to match the colors in game.
+	var name = document.createElement('strong');
+	name.innerHTML = effect.name;
+	name.setAttribute('style', "color:#CC00FF");
+	
+	line = document.createElement('span');
+	line.appendChild(name);
+	if (isCondensed == false){
+	line.innerHTML += ":  " + effect.desc;
+	line.setAttribute('style', "color:#FFFFFF");
+	}
+	return line;
+	
+}	
 
 function getItemEffect(string){
+//Library of defined Effect names.  Will be removed once items are converted to be read from a rails db.
+
 	var effect = new Object();
 	var text = document.createElement('p');
 	switch(string){
@@ -3694,27 +3744,33 @@ function getItemEffect(string){
 	}
 	return effect;
 }
-function createTable(item){
-var table = document.createElement('table');
-table.setAttribute('id', "Item Steps Container");
-//table.setAttribute('style', 'border: 1px solid #FFFFFF');
-table.setAttribute('valign', "top");
-var len = item.length;
 
-var itemname = document.createElement('h3')
-itemname.setAttribute('id', 'itemname');
-itemname.innerHTML = item[0].name;
-itemname.setAttribute('style', 'color:#1EFDFF; text-align: center');
-var titletr = document.createElement('tr')
-var titletd = document.createElement('td')
-titletd.setAttribute('colspan', "2");
-titletd.appendChild(itemname);
-titletr.appendChild(titletd);
+function createCondensedTable(item){
+//Creates a table of the condensed stats for each level of an item.
 
+//Creates the table DOM object and sets attributes
+	var table = document.createElement('table');
+	table.setAttribute('id', "Item Steps Container");
+	table.setAttribute('valign', "top");
+	table.setAttribute('style', 'width: 100%')
 
-table.appendChild(titletr);
+//Creates and sets the header with the item name over the table
 
+	var itemNameHeader = document.createElement('h3')
+	itemNameHeader.setAttribute('id', 'itemname');
+	itemNameHeader.innerHTML = item[0].name;
+	itemNameHeader.setAttribute('style', 'color:#1EFDFF; text-align: center');
+	var titleTR = document.createElement('tr')
+	var titleTD = document.createElement('td')
+	titleTD.setAttribute('colspan', "2");
+	titleTD.appendChild(itemNameHeader);
+	titleTR.appendChild(titleTD);
 
+table.appendChild(titleTR);
+
+// This loop populates the table with each level of item
+
+	var len = item.length;
 	for (var i = len-1; i > -1; i--){
 		string = item[i].name + item[i].level;
 		item[i].tables.condensed.setAttribute('id', string);
@@ -3732,28 +3788,25 @@ table.appendChild(titletr);
 		}
 		
 	}
-	
+	//Delegates a hover function to each section. Hovering over these sections brings up the full description.
 	$("table").delegate("tr.condensedtip", "hover", function(event){
 		var current = event.target;
-		while ($(current).attr('class') != "condensedtip"){
-		current = $(current).parent();
-		}
-
-		var string = $(current).attr('id');
 		
-		//document.write(string);
+		while ($(current).attr('class') != "condensedtip"){
+			current = $(current).parent();
+			}
+		
+		//extracts which version of the item the current dom object being hovered over is for
+		var string = $(current).attr('id');
 		var len = string.length;
 		var level = string.substr(len-1, len);
 		level = level - 1;
 		string = string.substr(0, len-1);
 		var newitem = createItem(string);
-		$("#itemname").html(newitem[0].name + "[" + (level + 1) + "]"); 
 		$("#full").html("");
 		$("#full").append(newitem[level].tables.full);
-
-		
-  });
-  table.setAttribute('style', 'width: 100%')
+	});
+  
 return table;
 }
 
