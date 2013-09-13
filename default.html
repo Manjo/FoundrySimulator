@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<script src= "js/lib/jquery.tools.min.js"></script>
+<script src ="js/items.js"> </script>
+<script src ="js/controller.js"> </script>
+
+<title>Artifact Foundry Sim</title>
+<style type="text/css">
+
+.condensedtip {
+	width: 300px;
+	height: 100px;
+}
+.maintable {
+
+	color: #FFFFFF;
+	background-image: url('images/ic-bg-main.jpg');
+	border-style: solid;
+	border-width: 4px;
+	height: 580px;
+	
+}
+.maintd{
+	border-style: solid;
+	border-width: 1px;
+}
+</style>
+</head>
+
+<body style="color: #FFFFFF; background-color: #333333" >
+<center>
+<table class="maintable">
+	<tr>
+		<td>
+			<input type="checkbox" class="filter" id="attackdamage"/> Attack Damage<br>
+			<input type="checkbox" class="filter" id="attackpenetration" /> Attack Penetration <br>
+			<input type="checkbox" class="filter" id="attackspeed"/> Attack Speed <br>
+			<input type="checkbox" class="filter" id="attacklifesteal"/> Attack Lifesteal<br>
+			<input type="checkbox" class="filter" id="criticalchance" /> Critical Chance <br> <br>
+			
+			<input type="checkbox" class="filter" id="health"/> Health <br>
+			<input type="checkbox" class="filter" id="healthregen"/> Health Regeneration<br>
+			<input type="checkbox" class="filter" id="attackarmor" /> Attack Armor <br>
+			<input type="checkbox" class="filter" id="powerarmor"/> Power Armor <br>
+			<input type="checkbox" class="filter" id="resilience"/> Resilience<br><br>
+			
+			<input type="checkbox" class="filter" id="powerdamage" /> Power Damage <br>
+			<input type="checkbox" class="filter" id="powerpenetration"/> Power Penetration <br>
+			<input type="checkbox" class="filter" id="powerlifesteal" /> Power Lifesteal <br>
+			<input type="checkbox" class="filter" id="will"/> Will <br>
+			<input type="checkbox" class="filter" id="willregen" /> Will Regeneration <br><br>
+			
+			<input type="checkbox" class="filter" id="movespeed"/> Move Speed <br>
+			<input type="checkbox" class="filter" id="cooldown" /> Cooldown Reduction <br>
+			<input type="checkbox" class="filter" id="credits"/> Credits <br>
+
+			<br><strong>Map:</strong><br>
+
+			<input type="radio" name="map" class = "mapselect" id="coast_city" checked value="Coast City" /> Coast City<br>
+			<input type="radio" name="map" class = "mapselect" id="gotham_heights" value="Gotham Heights" /> Gotham Heights
+
+		</td>
+		<td id = "shop" class="maintd">&nbsp;</td>
+		<td id = "condensed" valign="top" style="width: 250px; padding-top:15px;" class="maintd"></td>
+		<td id = "full" valign="top" style="width: 250px; padding-top:25px;" class="maintd">&nbsp;</td>
+	</tr>
+</table><br><br>
+
+</center>
+</body>
+
+</html>
