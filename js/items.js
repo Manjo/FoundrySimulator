@@ -43,7 +43,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.will = 100;
 				stages[0].stats.willregen = 2;
 				stages[0].stats.powerdamage = 10;
@@ -120,9 +120,9 @@ function createItem(string){
 				stages[2].name = "Coda Blade";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
-				stages[2].stats.buy = 1500;
+				stages[2].stats.buy = 1750;
 				stages[2].stats.sell = 1125;
-				stages[2].stats.attackdamage = 30;
+				stages[2].stats.attackdamage = 40;
 				stages[2].effect1 = getItemEffect('piercing1');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
@@ -133,7 +133,7 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2500;
 				stages[3].stats.sell = 1875;
-				stages[3].stats.attackdamage = 50;
+				stages[3].stats.attackdamage = 40;
 				stages[3].effect1 = getItemEffect('wounding');
 				stages[3].effect1 = getItemEffect('piercing2');
 				stages[3].tables = createItemTooltip(stages[3]);
@@ -152,7 +152,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.attacklifesteal = 1;
 				stages[0].stats.attackspeed = 4;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -162,10 +162,10 @@ function createItem(string){
 				stages[1].name = "Cheetah's Claw";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 500;
-				stages[1].stats.sell = 375;
-				stages[1].stats.attacklifesteal = 3;
-				stages[1].stats.attackspeed = 8;
+				stages[1].stats.buy = 750;
+				stages[1].stats.sell = 565;
+				stages[1].stats.attacklifesteal = 5;
+				stages[1].stats.attackspeed = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
 				stages[2] = new Object();
@@ -173,9 +173,9 @@ function createItem(string){
 				stages[2].name = "Cheetah's Claw";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
-				stages[2].stats.buy = 1000;
-				stages[2].stats.sell = 750;
-				stages[2].stats.attacklifesteal = 6;
+				stages[2].stats.buy = 1250;
+				stages[2].stats.sell = 940;
+				stages[2].stats.attacklifesteal = 10;
 				stages[2].stats.attackspeed = 15;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
@@ -184,9 +184,9 @@ function createItem(string){
 				stages[3].name = "Cheetah's Claw";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
-				stages[3].stats.buy = 1750;
-				stages[3].stats.sell = 1315;
-				stages[3].stats.attacklifesteal = 12;
+				stages[3].stats.buy = 2000;
+				stages[3].stats.sell = 1500;
+				stages[3].stats.attacklifesteal = 15;
 				stages[3].stats.attackspeed = 20;
 				stages[3].effect1 = getItemEffect('desperatespeed');
 				stages[3].tables = createItemTooltip(stages[3]);
@@ -203,7 +203,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.attackdamage = 5;
 				stages[0].effect1 = getItemEffect('powerburst');
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -244,7 +244,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.attackdamage = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
@@ -269,8 +269,9 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
-				stages[0].stats.attackdamage = 10;
+				stages[0].stats.sell = 450;
+				stages[0].stats.attackdamage = 5;
+				stages[0].stats.health = 100;
 				stages[0].tables = createItemTooltip(stages[0]);
 				
 				stages[1] = new Object();
@@ -280,7 +281,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1250;
 				stages[1].stats.sell = 940;
-				stages[1].stats.health = 150;
+				stages[1].stats.health = 200;
 				stages[1].stats.attackdamage = 20;
 				stages[1].tables = createItemTooltip(stages[1]);
 					
@@ -291,7 +292,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 2250;
 				stages[2].stats.sell = 1690;
-				stages[2].stats.health = 350;
+				stages[2].stats.health = 300;
 				stages[2].stats.attackdamage = 30;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
@@ -302,8 +303,8 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 3500;
 				stages[3].stats.sell = 2625;
-				stages[3].stats.health = 500;
-				stages[3].stats.attackdamage = 40;
+				stages[3].stats.health = 400;
+				stages[3].stats.attackdamage = 30;
 				stages[3].effect1 = getItemEffect('attackharrier');
 				stages[3].tables = createItemTooltip(stages[3]);
 				
@@ -321,7 +322,7 @@ function createItem(string){
 				stages[0].stats.buy = 750;
 				stages[0].stats.sell = 565;
 				stages[0].stats.attackdamage = 15;
-				stages[0].stats.cdr = 20;
+				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
 				stages[1] = new Object();
@@ -425,7 +426,7 @@ function createItem(string){
 				stages[2].stats.buy = 2250;	
 				stages[2].stats.sell = 1690;			
 				stages[2].stats.criticalchance = 15;
-				stages[2].stats.movespeed = 10;
+				stages[2].stats.movespeed = 15;
 				stages[2].stats.attackspeed = 30;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
@@ -436,9 +437,10 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 3250;
 				stages[3].stats.sell = 2440;
-				stages[3].stats.criticalchance = 25;
-				stages[3].stats.movespeed = 20;
+				stages[3].stats.criticalchance = 20;
+				stages[3].stats.movespeed = 15;
 				stages[3].stats.attackspeed = 50;
+				stages[3].effect1 = getItemEffect('Attack Fervor');
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 		//
@@ -451,10 +453,10 @@ function createItem(string){
 				stages[0].name = 'Soultaker Katana';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
-				stages[0].stats.buy = 1000;
-				stages[0].stats.sell = 750;
+				stages[0].stats.buy = 750;
+				stages[0].stats.sell = 565;
 				stages[0].stats.attackdamage = 10;
-				stages[0].stats.attacklifesteal = 10;
+				stages[0].stats.attacklifesteal = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -462,10 +464,10 @@ function createItem(string){
 				stages[1].name = 'Soultaker Katana';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 2000;
-				stages[1].stats.sell = 1500;
-				stages[1].stats.attackdamage = 30;
-				stages[1].stats.attacklifesteal = 15;
+				stages[1].stats.buy = 1500;
+				stages[1].stats.sell = 1125;
+				stages[1].stats.attackdamage = 20;
+				stages[1].stats.attacklifesteal = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
 				stages[2] = new Object();
@@ -473,10 +475,10 @@ function createItem(string){
 				stages[2].name = 'Soultaker Katana';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
-				stages[2].stats.buy = 2750;		
-				stages[2].stats.sell = 2065;		
-				stages[2].stats.attackdamage = 40;
-				stages[2].stats.attacklifesteal = 15;
+				stages[2].stats.buy = 2250;		
+				stages[2].stats.sell = 1690;		
+				stages[2].stats.attackdamage = 20;
+				stages[2].stats.attacklifesteal = 10;
 				stages[2].effect1 = getItemEffect('attackdamagecollector');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
@@ -485,9 +487,9 @@ function createItem(string){
 				stages[3].name = 'Soultaker Katana';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
-				stages[3].stats.buy = 3250;
-				stages[3].stats.sell = 2440;
-				stages[3].stats.attackdamage = 60;
+				stages[3].stats.buy = 3000;
+				stages[3].stats.sell = 2250;
+				stages[3].stats.attackdamage = 30;
 				stages[3].stats.attacklifesteal = 15;
 				stages[3].effect1 = getItemEffect('attackdamagecollector');
 				stages[3].tables = createItemTooltip(stages[3]);
@@ -531,8 +533,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.cdr = 6;
+				stages[0].stats.sell = 225;
+				stages[0].stats.attacklifesteal = 4;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -542,8 +544,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 750;
 				stages[1].stats.sell = 565;
-				stages[1].stats.cdr = 10;
-				stages[1].stats.attacklifesteal = 5;
+				stages[1].stats.attacklifesteal = 8;
 				stages[1].effect1 = getItemEffect('investment');
 				stages[1].tables = createItemTooltip(stages[1]);
 				
@@ -554,10 +555,21 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1750;		
 				stages[2].stats.sell = 1315;		
-				stages[2].stats.cdr = 10;
-				stages[2].stats.attacklifesteal = 5;
+				stages[2].stats.attacklifesteal = 8;
 				stages[2].effect1 = getItemEffect('atlantisaura');
 				stages[2].tables = createItemTooltip(stages[2]);
+				
+				stages[3] = new Object();
+				stages[3].stats = new Object();
+				stages[3].name = 'Atlantis Gambit';
+				stages[3].level = 4;
+				stages[3].image = createItemImage(stages[3].name, stages[3].level);
+				stages[3].stats.buy = 2250;		
+				stages[3].stats.sell = 1690;		
+				stages[3].stats.attacklifesteal = 8;
+				stages[3].effect1 = getItemEffect('atlantisaura');
+				stages[3].effect2 = getItemEffect('Targeting System');
+				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
 		//
@@ -571,7 +583,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.criticalchance = 5;
 				stages[0].stats.attackdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -594,7 +606,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1500;	
 				stages[2].stats.sell = 1125;
-				stages[2].stats.criticalchance = 20;
+				stages[2].stats.criticalchance = 15;
 				stages[2].stats.attackdamage = 30;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
@@ -603,10 +615,11 @@ function createItem(string){
 				stages[3].name = 'Zeiss Goggles';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
-				stages[3].stats.buy = 2250;
-				stages[3].stats.sell = 1690;
-				stages[3].stats.criticalchance = 30;
+				stages[3].stats.buy = 2500;
+				stages[3].stats.sell = 1875;
+				stages[3].stats.criticalchance = 20;
 				stages[3].stats.attackdamage = 40;
+				stages[3].effect1 = getItemEffect('Frenzy');
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -622,8 +635,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.attackdamage = 7;
+				stages[0].stats.sell = 225;
+				stages[0].stats.attackdamage = 6;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -633,7 +646,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 500;
 				stages[1].stats.sell = 375;
-				stages[1].stats.attackdamage = 15;
+				stages[1].stats.attackdamage = 12;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
 				stages[2] = new Object();
@@ -643,7 +656,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1000;	
 				stages[2].stats.sell = 750;
-				stages[2].stats.attackdamage = 30;
+				stages[2].stats.attackdamage = 24;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				stages[3] = new Object();
@@ -653,7 +666,7 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1500;
 				stages[3].stats.sell = 1500;
-				stages[3].stats.attackdamage = 45;
+				stages[3].stats.attackdamage = 32;
 				stages[3].effect1 = getItemEffect('refundable');
 				stages[3].tables = createItemTooltip(stages[3]);
 				
@@ -670,7 +683,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.attackspeed = 5;
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -682,7 +695,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1250;
 				stages[1].stats.sell = 940;
-				stages[1].stats.attackspeed = 15;
+				stages[1].stats.attackspeed = 20;
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
@@ -704,8 +717,9 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 3000;
 				stages[3].stats.sell = 2250;
-				stages[3].stats.attackspeed = 50;
+				stages[3].stats.attackspeed = 40;
 				stages[3].stats.cdr = 15;
+				stages[3].effect1 = getItemEffect('Time Anchor');
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -722,8 +736,8 @@ function createItem(string){
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 750;
 				stages[0].stats.sell = 565;
-				stages[0].stats.attackarmor = 10;
-				stages[0].stats.attacklifesteal = 10;
+				stages[0].stats.attackarmor = 20;
+				stages[0].stats.attackdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -733,10 +747,9 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1500;
 				stages[1].stats.sell = 1125;
-				stages[1].stats.attackdamage= 10;
-				stages[1].stats.attackarmor = 10;
-				stages[1].stats.attacklifesteal = 15;
-				stages[1].effect1 = getItemEffect('kineticarmor');
+				stages[1].stats.attackdamage= 15;
+				stages[1].stats.attackarmor = 25;
+				stages[1].stats.attacklifesteal = 5;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
 				stages[2] = new Object();
@@ -747,10 +760,9 @@ function createItem(string){
 				stages[2].stats.buy = 2250;	
 				stages[2].stats.sell = 1690;	
 				stages[2].stats.attackdamage= 20;
-				stages[2].stats.attackarmor = 10;
-				stages[2].stats.attacklifesteal = 15;
+				stages[2].stats.attackarmor = 30;
+				stages[2].stats.attacklifesteal = 5;
 				stages[2].effect1 = getItemEffect('kineticarmor');
-				stages[2].effect2 = getItemEffect('desperatestrength');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;
@@ -777,9 +789,9 @@ function createItem(string){
 				stages[1].name = "Batman's Utility Belt";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 2000;
+				stages[1].stats.buy = 1750;
 				stages[1].stats.sell = 1500;
-				stages[1].stats.health = 250;
+				stages[1].stats.health = 200;
 				stages[1].stats.attackspeed = 15;
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
@@ -789,13 +801,27 @@ function createItem(string){
 				stages[2].name = "Batman's Utility Belt";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
-				stages[2].stats.buy = 3000;
-				stages[2].stats.sell = 2250;
-				stages[2].stats.movespeed = 10;
+				stages[2].stats.buy = 2500;
+				stages[2].stats.sell = 1910;
+				stages[2].stats.movespeed = 5;
 				stages[2].stats.health = 300;				
-				stages[2].stats.attackspeed = 30;
+				stages[2].stats.attackspeed = 20;
 				stages[2].stats.cdr = 15;
 				stages[2].tables = createItemTooltip(stages[2]);
+							
+				stages[3] = new Object();
+				stages[3].stats = new Object();
+				stages[3].name = "Batman's Utility Belt";
+				stages[3].level = 4;
+				stages[3].image = createItemImage(stages[3].name, stages[3].level);
+				stages[3].stats.buy = 3250;
+				stages[3].stats.sell = 2440;
+				stages[3].stats.movespeed = 5;
+				stages[3].stats.health = 300;				
+				stages[3].stats.attackspeed = 20;
+				stages[3].stats.cdr = 15;
+				stages[3].effect1 = getItemEffect('Purge');
+				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
 				
@@ -833,7 +859,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 3000;
 				stages[2].stats.sell = 2250;
-				stages[2].stats.attackdamage = 60;
+				stages[2].stats.attackdamage = 50;
 				stages[2].stats.powerarmor = 30;
 				stages[2].effect1 = getItemEffect('responseshield');
 				stages[2].effect2 = getItemEffect('desperateendurance');
@@ -853,7 +879,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.will = 100;
 				stages[0].stats.willregen = 2;
 				stages[0].stats.attackdamage = 5;
@@ -898,6 +924,7 @@ function createItem(string){
 				stages[3].stats.attackdamage = 40;
 				stages[3].effect1 = getItemEffect('willbattery');
 				stages[3].effect2 = getItemEffect('forceofwill');
+				stages[3].effect3 = getItemEffect('Intensity');
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 				
@@ -941,9 +968,10 @@ function createItem(string){
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
 				stages[0].stats.sell = 165;
-				stages[0].stats.health = 150;
-				stages[0].stats.healthregen = 5;
+				stages[0].stats.health = 125;
+				stages[0].stats.healthregen = 15;
 				stages[0].stats.attackarmor = 15;
+				stages[0].effect1 = getItemEffect('Toughness');
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
 				
@@ -958,7 +986,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.powerdamage = 6;
 				stages[0].stats.powerarmor = 6;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -987,6 +1015,19 @@ function createItem(string){
 				stages[2].effect1 = getItemEffect('oaaura');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
+				stages[3] = new Object();
+				stages[3].stats = new Object();
+				stages[3].name = 'Oa Gambit';
+				stages[3].level = 4;
+				stages[3].image = createItemImage(stages[3].name, stages[3].level);
+				stages[3].stats.buy = 2250;	
+				stages[3].stats.sell = 1690;		
+				stages[3].stats.powerdamage = 55;
+				stages[3].stats.powerarmor = 35;
+				stages[3].effect1 = getItemEffect('oaaura');
+				stages[3].effect2 = getItemEffect('Protection Field');
+				stages[3].tables = createItemTooltip(stages[2]);
+				
 				return stages;		
 		//
 		// The Medusa Mask
@@ -1001,7 +1042,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.health = 75;
 				stages[0].stats.healthregen = 4;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -1037,12 +1078,11 @@ function createItem(string){
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1500;
-				stages[3].stats.sell = 1500;	
+				stages[3].stats.sell = 1125;	
 				stages[3].stats.health = 300;
 				stages[3].stats.healthregen = 20;
 				stages[3].stats.willregen = 10;
-				stages[3].effect1 = getItemEffect('refundable');
-				stages[3].effect2 = getItemEffect('medisys');
+				stages[3].effect1 = getItemEffect('medisys');
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;	
@@ -1057,7 +1097,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.attackarmor = 6;
 				stages[0].stats.powerarmor = 6;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -1103,8 +1143,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
-				stages[0].stats.health = 150;
+				stages[0].stats.sell = 450;
+				stages[0].stats.health = 100;
 				stages[0].stats.healthregen = 20;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
@@ -1135,7 +1175,7 @@ function createItem(string){
 				stages[0].stats.buy = 750;
 				stages[0].stats.sell = 565;
 				stages[0].stats.resilience = 15;
-				stages[0].stats.healthregen = 20;
+				stages[0].stats.healthregen = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -1161,9 +1201,10 @@ function createItem(string){
 				stages[0].name = "Spear of Destiny";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
-				stages[0].stats.buy = 750;
-				stages[0].stats.sell = 565;
-				stages[0].stats.powerarmor = 50;
+				stages[0].stats.buy = 1000;
+				stages[0].stats.sell = 750;
+				stages[0].stats.attackdamage = 10;
+				stages[0].stats.powerarmor = 35;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -1171,10 +1212,10 @@ function createItem(string){
 				stages[1].name =  "Spear of Destiny";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 2000;
-				stages[1].stats.sell = 1500;
-				stages[1].stats.criticalchance = 15;
-				stages[1].stats.powerarmor = 50;
+				stages[1].stats.buy = 2250;
+				stages[1].stats.sell = 1690;
+				stages[1].stats.attackdamage = 20;
+				stages[1].stats.powerarmor = 55;
 				stages[1].effect1 = getItemEffect('enforcement');
 				stages[1].tables = createItemTooltip(stages[1]);
 				return stages;
@@ -1189,7 +1230,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.health = 100;
 				stages[0].stats.healthregen = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -1201,8 +1242,8 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1250;
 				stages[1].stats.sell = 940;
-				stages[1].stats.health = 200;
-				stages[1].stats.healthregen = 15;
+				stages[1].stats.health = 100;
+				stages[1].stats.healthregen = 10;
 				stages[1].effect1 = getItemEffect('healthcollector');
 				stages[1].tables = createItemTooltip(stages[1]);
 			
@@ -1215,8 +1256,8 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 2250;
 				stages[2].stats.sell = 1690;
-				stages[2].stats.health = 475;
-				stages[2].stats.healthregen = 30;
+				stages[2].stats.health = 400;
+				stages[2].stats.healthregen = 25;
 				stages[2].effect1 = getItemEffect('healthcollector');
 				stages[2].tables = createItemTooltip(stages[2]);
 
@@ -1228,8 +1269,8 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2750;
 				stages[3].stats.sell = 2065;
-				stages[3].stats.health = 475;
-				stages[3].stats.healthregen = 30;
+				stages[3].stats.health = 400;
+				stages[3].stats.healthregen = 25;
 				stages[3].stats.resilience = 15;
 				stages[3].effect1 = getItemEffect('healthcollector');
 				stages[3].tables = createItemTooltip(stages[3]);
@@ -1317,7 +1358,8 @@ function createItem(string){
 				stages[1].stats.buy = 2750;
 				stages[1].stats.sell = 2065;
 				stages[1].stats.attackarmor = 60;
-				stages[1].stats.powerarmor = 60;
+				stages[1].stats.powerarmor = 40;
+				stages[1].effect1 = getItemEffect('Lazarus Effect');
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
 				return stages;
@@ -1334,7 +1376,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.health = 100;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
@@ -1362,6 +1404,21 @@ function createItem(string){
 				stages[2].effect1 = getItemEffect('olympusaura');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
+				
+				stages[3] = new Object();
+				stages[3].stats = new Object();
+				stages[3].name = 'Olympus Gambit';
+				stages[3].level = 3;
+				stages[3].image = createItemImage(stages[3].name, stages[3].level);
+				stages[3].stats.buy = 2250;		
+				stages[3].stats.sell = 1690;			
+				stages[3].stats.health = 250;
+				stages[3].stats.attackarmor = 20;
+				stages[3].stats.powerarmor = 20;
+				stages[3].effect1 = getItemEffect('olympusaura');
+				stages[3].effect1 = getItemEffect('Bastion');
+				stages[3].tables = createItemTooltip(stages[3]);
+				
 				return stages;		
 
 				
@@ -1376,8 +1433,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.health = 100;
+				stages[0].stats.sell = 225;
+				stages[0].stats.health = 80;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -1387,7 +1444,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 500;
 				stages[1].stats.sell = 375;
-				stages[1].stats.health = 200;
+				stages[1].stats.health = 160;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
 				stages[2] = new Object();
@@ -1397,7 +1454,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 750;	
 				stages[2].stats.sell = 565;	
-				stages[2].stats.health = 300;
+				stages[2].stats.health = 240;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				stages[3] = new Object();
@@ -1407,7 +1464,7 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1000;
 				stages[3].stats.sell = 1000;
-				stages[3].stats.health = 400;
+				stages[3].stats.health = 320;
 				stages[3].effect1 = getItemEffect('refundable');
 				stages[3].tables = createItemTooltip(stages[3]);
 				
@@ -1423,10 +1480,10 @@ function createItem(string){
 				stages[0].name = "Steel's Breastplate";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
-				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.will = 75;
-				stages[0].stats.attackarmor = 5;
+				stages[0].stats.buy = 500;
+				stages[0].stats.sell = 450;
+				stages[0].stats.will = 150;
+				stages[0].stats.attackarmor = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -1434,9 +1491,9 @@ function createItem(string){
 				stages[1].name = "Steel's Breastplate";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 1000;
-				stages[1].stats.sell = 750;
-				stages[1].stats.will = 200;
+				stages[1].stats.buy = 1250;
+				stages[1].stats.sell = 940;
+				stages[1].stats.will = 300;
 				stages[1].stats.attackarmor = 30;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
@@ -1447,9 +1504,10 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 2000;	
 				stages[2].stats.sell = 1500;	
-				stages[2].stats.will = 200;
-				stages[2].stats.attackarmor = 30;
+				stages[2].stats.will = 300;
+				stages[2].stats.attackarmor = 60;
 				stages[2].stats.movespeed = 20;
+				stages[2].effect1 = getItemEffect("Mercury's Gift");
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;	
@@ -1466,7 +1524,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.buy = 375;
+				stages[0].stats.buy = 450;
 				stages[0].stats.health = 100;
 				stages[0].stats.willregen = 2;
 				stages[0].stats.cdr = 5;
@@ -1494,6 +1552,7 @@ function createItem(string){
 				stages[2].stats.health = 300;
 				stages[2].stats.willregen = 25;
 				stages[2].stats.cdr = 15;
+				stages[2].effect1 = getItemEffect("Mercury's Gift");
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;			
@@ -1578,6 +1637,7 @@ function createItem(string){
 				stages[2].stats.sell = 2250;	
 				stages[2].stats.attackarmor = 50;
 				stages[2].stats.powerdamage = 90;
+				stages[2].effect1 = getItemEffect('Mystical Conversion');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;		
@@ -1669,6 +1729,7 @@ function createItem(string){
 				stages[2].stats.buy = 2250;	
 				stages[2].stats.sell = 1690;	
 				stages[2].stats.powerarmor = 60;
+				stages[2].stats.movespeed = 10;
 				stages[2].stats.healthregen = 30;
 				stages[2].effect1 = getItemEffect('vitality');
 				stages[2].tables = createItemTooltip(stages[2]);
@@ -1699,8 +1760,8 @@ function createItem(string){
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 1000;
 				stages[0].stats.sell = 750;
-				stages[0].stats.health = 125;
-				stages[0].stats.powerarmor = 30;
+				stages[0].stats.health = 200;
+				stages[0].stats.attackarmor = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -1710,8 +1771,8 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 2000;
 				stages[1].stats.sell = 1500;
-				stages[1].stats.health = 200;
-				stages[1].stats.powerarmor = 40;
+				stages[1].stats.health = 250;
+				stages[1].stats.attackarmor = 35;
 				stages[1].stats.cdr = 15;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
@@ -1722,9 +1783,10 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 3000;	
 				stages[2].stats.sell = 2250;	
-				stages[2].stats.powerarmor = 50;
+				stages[2].stats.attackarmor = 45;
 				stages[2].stats.health = 300;
-				stages[2].stats.cdr = 20;
+				stages[2].stats.cdr = 15;
+				stages[2].effect1 = getItemEffect('Burning Core');
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;			
@@ -1748,23 +1810,23 @@ function createItem(string){
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
 		//
-		//	The Materioptikon
+		//	Doctor Destiny's Dreamstone
 		//		
-		case "The Materioptikon":
+		case "Doctor Destiny's Dreamstone":
 						
 				stages[0] = new Object();
 				stages[0].stats = new Object();
-				stages[0].name = "The Materioptikon";
+				stages[0].name = "Doctor Destiny's Dreamstone";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.willregen = 8;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
 				stages[1].stats = new Object();
-				stages[1].name = "The Materioptikon";
+				stages[1].name = "Doctor Destiny's Dreamstone";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 750;
@@ -1776,7 +1838,7 @@ function createItem(string){
 				
 				stages[2] = new Object();
 				stages[2].stats = new Object();
-				stages[2].name = "The Materioptikon";
+				stages[2].name = "Doctor Destiny's Dreamstone";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1750;	
@@ -1802,7 +1864,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.will = 75;
 				stages[0].stats.willregen = 3;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -1856,7 +1918,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.will = 50;
 				stages[0].stats.powerdamage = 5;
 				stages[0].effect1 = getItemEffect('willrestore');
@@ -1898,10 +1960,9 @@ function createItem(string){
 				stages[0].name = "Fatality's Energy Lance";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
-				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.powerdamage = 3;
-				stages[0].stats.cdr = 5;
+				stages[0].stats.buy = 500;
+				stages[0].stats.sell = 450;
+				stages[0].stats.powerdamage = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
 				stages[1] = new Object();
@@ -1909,10 +1970,10 @@ function createItem(string){
 				stages[1].name = "Fatality's Energy Lance";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 500;
-				stages[1].stats.sell = 375;
-				stages[1].stats.powerdamage = 5;
-				stages[1].stats.cdr = 10;
+				stages[1].stats.buy = 1000;
+				stages[1].stats.sell = 750;
+				stages[1].stats.powerdamage = 40;
+				stages[1].stats.cdr = 5;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
 				stages[2] = new Object();
@@ -1920,10 +1981,10 @@ function createItem(string){
 				stages[2].name = "Fatality's Energy Lance";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
-				stages[2].stats.buy = 1000;
-				stages[2].stats.sell = 750;
-				stages[2].stats.powerdamage = 20;
-				stages[2].stats.cdr = 15;
+				stages[2].stats.buy = 1500;
+				stages[2].stats.sell = 1125;
+				stages[2].stats.powerdamage = 60;
+				stages[2].stats.cdr = 10;
 				stages[2].tables = createItemTooltip(stages[2]);
 
 				stages[3] = new Object();
@@ -1931,10 +1992,11 @@ function createItem(string){
 				stages[3].name = "Fatality's Energy Lance";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
-				stages[3].stats.buy = 1500;
-				stages[3].stats.sell = 1125;
-				stages[3].stats.powerdamage = 40;
-				stages[3].stats.cdr = 20;
+				stages[3].stats.buy = 2250;
+				stages[3].stats.sell = 1690;
+				stages[3].stats.powerdamage = 60;
+				stages[3].stats.cdr = 15;
+				stages[3].effect1 = getItemEffect('Energy Blast');
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;
@@ -1949,7 +2011,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
+				stages[0].stats.movespeed = 5;
 				stages[0].stats.powerdamage = 10;
 				stages[0].stats.will = 125;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -1961,6 +2024,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1000;
 				stages[1].stats.sell = 750;
+				stages[1].stats.movespeed = 5;
 				stages[1].stats.powerdamage = 10;
 				stages[1].stats.will = 150;
 				stages[1].stats.cdr = 10;
@@ -1974,6 +2038,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1750;
 				stages[2].stats.sell = 1315;
+				stages[2].stats.movespeed = 10;
 				stages[2].stats.will = 200;
 				stages[2].stats.powerdamage = 20;
 				stages[2].stats.cdr = 20;
@@ -1988,6 +2053,7 @@ function createItem(string){
 				stages[3].stats.buy = 2500;
 				stages[3].stats.sell = 1875;
 				stages[3].stats.will = 250;
+				stages[3].stats.movespeed = 10;
 				stages[3].stats.powerdamage = 50;
 				stages[3].stats.cdr = 20;
 				stages[3].effect1 = getItemEffect('shrapnel');
@@ -2005,7 +2071,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
+				stages[0].stats.sell = 450;
 				stages[0].stats.powerlifesteal = 5;
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -2041,6 +2107,7 @@ function createItem(string){
 				stages[3].stats.sell = 1500;
 				stages[3].stats.powerlifesteal = 20;
 				stages[3].stats.cdr = 20;
+				stages[3].effect1 = getItemEffect('Blood Spirit');
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;	
@@ -2171,7 +2238,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
+				stages[0].stats.sell = 225;
 				stages[0].stats.willregen = 8;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
@@ -2198,6 +2265,20 @@ function createItem(string){
 				stages[2].stats.powerdamage = 40;
 				stages[2].effect1 = getItemEffect('qwardaura');
 				stages[2].tables = createItemTooltip(stages[2]);
+								
+								
+				stages[3] = new Object();
+				stages[3].stats = new Object();
+				stages[3].name = 'Qward Gambit';
+				stages[3].level = 4;
+				stages[3].image = createItemImage(stages[3].name, stages[3].level);
+				stages[3].stats.buy = 2250;		
+				stages[3].stats.sell = 1690;			
+				stages[3].stats.willregen = 8;		
+				stages[3].stats.powerdamage = 50;
+				stages[3].effect1 = getItemEffect('qwardaura');
+				stages[3].effect2 = getItemEffect('Scanning');
+				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;	
 
@@ -2211,8 +2292,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.powerdamage = 12;
+				stages[0].stats.sell = 225;
+				stages[0].stats.powerdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
 				stages[1] = new Object();
@@ -2222,7 +2303,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 500;
 				stages[1].stats.sell = 375;
-				stages[1].stats.powerdamage = 25;
+				stages[1].stats.powerdamage = 20;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
 				stages[2] = new Object();
@@ -2232,7 +2313,7 @@ function createItem(string){
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1000;
 				stages[2].stats.sell = 750;
-				stages[2].stats.powerdamage = 50;
+				stages[2].stats.powerdamage = 40;
 				stages[2].tables = createItemTooltip(stages[2]);
 
 				stages[3] = new Object();
@@ -2241,8 +2322,8 @@ function createItem(string){
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1500;
-				stages[3].stats.sell = 1125;
-				stages[3].stats.powerdamage = 75;
+				stages[3].stats.sell = 1500;
+				stages[3].stats.powerdamage = 60;
 				stages[3].effect1 = getItemEffect('refundable');
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
@@ -2257,10 +2338,10 @@ function createItem(string){
 				stages[0].name = "Neron's Contract";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
-				stages[0].stats.buy = 250;
-				stages[0].stats.sell = 190;
-				stages[0].stats.will = 75;
-				stages[0].stats.powerdamage = 5;
+				stages[0].stats.buy = 500;
+				stages[0].stats.sell = 450;
+				stages[0].stats.attackarmor = 15;
+				stages[0].stats.powerdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
 				stages[1] = new Object();
@@ -2268,9 +2349,9 @@ function createItem(string){
 				stages[1].name = "Neron's Contract";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
-				stages[1].stats.buy = 750;
-				stages[1].stats.sell = 565;
-				stages[1].stats.will = 100;
+				stages[1].stats.buy = 1000;
+				stages[1].stats.sell = 750;
+				stages[1].stats.attackarmor = 25;
 				stages[1].stats.powerdamage = 25;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
@@ -2279,10 +2360,11 @@ function createItem(string){
 				stages[2].name = "Neron's Contract";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
-				stages[2].stats.buy = 1500;
-				stages[2].stats.sell = 1125;
-				stages[2].stats.will = 200;
-				stages[2].stats.powerdamage = 50;
+				stages[2].stats.buy = 1750;
+				stages[2].stats.sell = 1315;
+				stages[2].stats.movespeed = 5;
+				stages[2].stats.attackarmor = 40;
+				stages[2].stats.powerdamage = 40;
 				stages[2].tables = createItemTooltip(stages[2]);
 
 				stages[3] = new Object();
@@ -2290,11 +2372,12 @@ function createItem(string){
 				stages[3].name = "Neron's Contract";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
-				stages[3].stats.buy = 2500;
-				stages[3].stats.sell = 1875;
-				stages[3].stats.powerdamage = 80;
-				stages[3].stats.will = 300;
-				stages[3].stats.movespeed = 20;
+				stages[3].stats.buy = 2750;
+				stages[3].stats.sell = 2065;
+				stages[3].stats.powerdamage = 50;
+				stages[3].stats.attackarmor = 50;
+				stages[3].stats.movespeed = 10;
+				stages[3].effect1 = getItemEffect('Stasis Field');
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2310,9 +2393,8 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;
-				stages[0].stats.powerdamage = 20;
-				stages[0].stats.cdr = 5;
+				stages[0].stats.sell = 450;
+				stages[0].stats.powerdamage = 30;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
 				stages[1] = new Object();
@@ -2322,8 +2404,7 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1000;
 				stages[1].stats.sell = 750;
-				stages[1].stats.powerdamage = 20;
-				stages[1].stats.cdr = 5;
+				stages[1].stats.powerdamage = 30;
 				stages[1].effect1 = getItemEffect('powerharvest');
 				stages[1].tables = createItemTooltip(stages[1]);	
 				return stages;
@@ -2340,7 +2421,7 @@ function createItem(string){
 				stages[0].stats.buy = 750;
 				stages[0].stats.sell = 565;
 				stages[0].stats.attackspeed = 10;
-				stages[0].stats.powerdamage = 10;
+				stages[0].stats.powerdamage = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -2363,7 +2444,7 @@ function createItem(string){
 				stages[2].stats.buy = 2500;		
 				stages[2].stats.sell = 1875;			
 				stages[2].stats.attackspeed = 40;		
-				stages[2].stats.powerdamage = 20;
+				stages[2].stats.powerdamage = 15;
 				stages[2].effect1 = getItemEffect('chargedarmor');
 				stages[2].effect2 = getItemEffect('chargedattack');
 				stages[2].tables = createItemTooltip(stages[2]);
@@ -2380,7 +2461,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.sell = 375;	
+				stages[0].stats.sell = 450;	
 				stages[0].stats.powerdamage = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
@@ -2402,7 +2483,7 @@ function createItem(string){
 				stages[2].stats.buy = 1500;
 				stages[2].stats.sell = 1125;
 				stages[2].stats.powerdamage = 60;
-				stages[2].effect1 = getItemEffect('devastating1');
+				stages[2].effect1 = getItemEffect('devastating');
 				stages[2].tables = createItemTooltip(stages[2]);
 
 				stages[3] = new Object();
@@ -2412,9 +2493,9 @@ function createItem(string){
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2500;
 				stages[3].stats.sell = 1875;
-				stages[3].stats.powerdamage = 60;
+				stages[3].stats.powerdamage = 70;
 				stages[3].effect1 = getItemEffect('disintegration');
-				stages[3].effect2 = getItemEffect('devastating2');
+				stages[3].effect2 = getItemEffect('devastating');
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2562,10 +2643,9 @@ function createItem(string){
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
 				stages[0].stats.sell = 225;
-				stages[0].stats.attackarmor = 5;
-				stages[0].stats.healthregen = 5;
+				stages[0].stats.health = 75;
 				stages[0].effect1 = getItemEffect('marauderburst1');
-				stages[0].effect2 = getItemEffect('marauderedge');
+				stages[0].effect2 = getItemEffect('marauderdefense');
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
 				stages[1] = new Object();
@@ -2575,11 +2655,10 @@ function createItem(string){
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 750;
 				stages[1].stats.sell = 565;
-				stages[1].stats.health = 100;
-				stages[1].stats.healthregen = 10;
-				stages[1].stats.attackarmor = 10;
+				stages[1].stats.health = 200;
+				stages[1].stats.healthregen = 20;
 				stages[1].effect1 = getItemEffect('marauderburst3');
-				stages[1].effect2 = getItemEffect('marauderedge');
+				stages[1].effect2 = getItemEffect('marauderdefense');
 				stages[1].tables = createItemTooltip(stages[1]);
 			
 				
@@ -2695,7 +2774,7 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.attacklifesteal = 5;
 				stages[1].stats.attackdamage = 10;
-				stages[1].effect1 = getItemEffect('marauderburst3');
+				stages[1].effect1 = getItemEffect('marauderburst2');
 				stages[1].effect2 = getItemEffect('marauderedge');
 				stages[1].tables = createItemTooltip(stages[1]);
 			
@@ -2710,7 +2789,8 @@ function createItem(string){
 				stages[2].stats.sell = 940;
 				stages[2].stats.attackdamage = 20;
 				stages[2].stats.attacklifesteal = 10;
-				stages[2].effect1 = getItemEffect('marauderburst4');
+				stages[2].effect1 = getItemEffect('marauderburst3');
+				stages[2].effect2 = getItemEffect('marauderedge');
 				stages[2].tables = createItemTooltip(stages[2]);
 
 		
@@ -2724,6 +2804,7 @@ function createItem(string){
 				stages[3].stats.attackdamage = 50;
 				stages[3].stats.attacklifesteal = 10;
 				stages[3].effect1 = getItemEffect('marauderburst4');
+				stages[3].effect2 = getItemEffect('marauderedge');
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 		//
@@ -2739,23 +2820,37 @@ function createItem(string){
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
 				stages[0].stats.sell = 165;
-				stages[0].stats.health = 150;
-				stages[0].stats.attackdamage = 15;
+				stages[0].stats.health = 75;
+				stages[0].stats.attackdamage = 10;
 				stages[0].effect1 = getItemEffect('attacksyphon');
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
 				
-		case "Speed Force":
+		case "Speed Force Battery":
 						
 				stages[0] = new Object();
 				stages[0].stats = new Object();
-				stages[0].name = "Speed Force";
+				stages[0].name = "Speed Force Battery";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 750;
 				stages[0].stats.sell = 565;
 				stages[0].stats.movespeed = 20;
 				stages[0].tables = createItemTooltip(stages[0]);	
+								
+								
+				stages[1] = new Object();
+				stages[1].stats = new Object();
+				stages[1].name = "Speed Force Battery";
+				stages[1].level = 2;
+				stages[1].image = createItemImage(stages[1].name, stages[1].level);
+				stages[1].stats.buy = 2750;
+				stages[1].stats.sell = 2065;
+				stages[1].stats.movespeed = 20;
+				stages[1].effect1 = getItemEffect('Blink Jump');
+				stages[1].tables = createItemTooltip(stages[1]);	
+				
+				
 				return stages;		
 				
 		case "Health Pack":
@@ -2784,8 +2879,30 @@ function createItem(string){
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;			
 				
+		case "Bleed Portal":
+				stages[0] = new Object();
+				stages[0].stats = new Object();
+				stages[0].name = "Bleed Portal";
+				stages[0].level = 1;
+				stages[0].image = createItemImage(stages[0].name, stages[0].level);
+				stages[0].stats.buy = 500;
+				stages[0].stats.sell = 375;
+				stages[0].effect1 = getItemEffect('Bleed Tunneling');
+				stages[0].tables = createItemTooltip(stages[0]);	
+				return stages;
 				
-				
+		case "Tektite Vial":
+						
+				stages[0] = new Object();
+				stages[0].stats = new Object();
+				stages[0].name = "Tektite Vial";
+				stages[0].level = 1;
+				stages[0].image = createItemImage(stages[0].name, stages[0].level);
+				stages[0].stats.buy = 250;
+				stages[0].stats.sell = 125;
+				stages[0].effect1 = getItemEffect('Tektite Vial');
+				stages[0].tables = createItemTooltip(stages[0]);	
+				return stages;		
 				
 		case "blank":
 				stages[0] = new Object();
@@ -2878,6 +2995,12 @@ function createItemTooltip(currentitem){
 			var effect2 = createItemEffectSpan(currentitem.effect2, false);
 			stats.appendChild(space2);
 			stats.appendChild(effect2);
+			if (currentitem.effect3 != undefined ){
+				var space3 = document.createElement('br');
+				var effect3 = createItemEffectSpan(currentitem.effect3, false);
+				stats.appendChild(space3);
+				stats.appendChild(effect3);
+			}
 		}
 	}
 	var complete = document.createElement('div');	
@@ -2914,6 +3037,12 @@ function createItemTooltip(currentitem){
 			var effect2 = createItemEffectSpan(currentitem.effect2, true);
 			condensedStats.appendChild(space2);
 			condensedStats.appendChild(effect2);
+			if (currentitem.effect3 != undefined ){
+				var space3 = document.createElement('br');
+				var effect3 = createItemEffectSpan(currentitem.effect3, true);
+				condensedStats.appendChild(space3);
+				condensedStats.appendChild(effect3);
+			}
 		}
 		
 
@@ -3299,14 +3428,14 @@ items[4] = [	"Nil Ring", 				"Qward Gambit", 		"Radion Shard", 			"Neron's Contr
 				"Fatality's Energy Lance", 	"Eye of Ekron", 		"Pandora's Box", 			"Psi-Scimitar", 
 				"Abin Sur's Lantern", 		"The Book of Eternity", "The Starheart"
 				];
-items[5] = [	"Marauder Ring", 			"The Materioptikon", 	"Gorilla Grodd's Helmet", 	"The Logoz", 
+items[5] = [	"Marauder Ring", 			"Doctor Destiny's Dreamstone", 	"Gorilla Grodd's Helmet", 	"The Logoz", 
 				"Two Face's Coin", 			"Blue Scarab", 			"Cosmic Staff", 			"blank", 
 				"Atlantean Royal Seal", 	"Eclipso's Diamond", 	"blank"
 				];
 				
-items[6] = [	"Health Pack", 				"Will Pack",			"Speed Force",				"blank",
-				"blank",					"blank",				"blank",					"blank",
-				"blank",					"blank",				"blank"
+items[6] = [	"Health Pack", 				"Will Pack",			"Tektite Vial",				"blank",
+				"Bleed Portal",				"blank",				"blank",					"blank",
+				"Speed Force Battery",		"blank",				"blank"
 				];
 
 return items;
@@ -3339,7 +3468,7 @@ items[3] = [	"Olympus Gambit", 			"Hawkman's Harness",	"Steel's Breastplate" , 	
 				"Suit of Sorrows", 			"Kryptonian War Armor", "Fragment of Mogo" 
 			];
 			
-items[4] = [	"Nil Ring", 				"The Materioptikon", 	"Gorilla Grodd's Helmet", 	"The Logoz", 
+items[4] = [	"Nil Ring", 				"Doctor Destiny's Dreamstone", 	"Gorilla Grodd's Helmet", 	"The Logoz", 
 				"Fatality's Energy Lance", 	"Eye of Ekron", 		"Pandora's Box", 			"Psi-Scimitar", 
 				"Abin Sur's Lantern", 		"The Book of Eternity", "The Starheart"
 				];
@@ -3349,9 +3478,9 @@ items[5] = [	"Qward Gambit", 			"Radion Shard", 		"Neron's Contract",  		"blank"
 				"Atlantean Royal Seal", 	"Eclipso's Diamond", 	"blank"
 				];
 				
-items[6] = [	"Health Pack", 				"Will Pack",			"Speed Force",				"blank",
-				"blank",					"blank",				"blank",					"blank",
-				"blank",					"blank",				"blank"
+items[6] = [	"Health Pack", 				"Will Pack",			"Tektite Vial",				"blank",
+				"Bleed Portal",				"blank",				"blank",					"blank",
+				"Speed Force Battery",		"blank",				"blank"
 				];
 
 return items;
@@ -3361,14 +3490,36 @@ function createItemEffectSpan(effect, isCondensed){
 	//Formats the item effect description to match the colors in game.
 	var name = document.createElement('strong');
 	name.innerHTML = effect.name;
-	name.setAttribute('style', "color:#CC00FF");
+	var color;
+	
+	switch (effect.type){
+			case "Consumable":
+			case "Active":
+				color = "color:#00FF00";
+				break;
+			case "Passive": 
+				color = "color:#CC00FF";	
+				break;
+	}
+	name.setAttribute('style', color);
 	
 	line = document.createElement('span');
 	line.appendChild(name);
 	if (isCondensed == false){
 	line.innerHTML += ":  " + effect.desc;
+	
 	line.setAttribute('style', "color:#FFFFFF");
+	if (effect.type == "Consumable")
+		{
+		warning = document.createElement('p');
+		warning.setAttribute('style', 'color:#FF0000');
+		warning.innerHTML = "Consumed after use.";
+		line.appendChild(warning);
+		}
 	}
+	
+	
+	
 	return line;
 	
 }	
@@ -3379,364 +3530,549 @@ function getItemEffect(string){
 	var effect = new Object();
 	var text = document.createElement('p');
 	switch(string){
+		case "Toughness":
+			effect.name = "Toughness";
+			effect.desc = "Blocks 5 damage from Champion basic attacks."
+			effect.type = "Passive"; 
+			break;
 	
+		case "Burning Core":
+			effect.name = "Burning Core";
+			effect.desc = "Activate to deal 100 Power Damage to all nearby enemies and then, for 15s, deals 40-20 decaying Power Damage per second to enemies nearby (60s Cooldown)."
+			effect.type = "Active"; 
+			break;
+	
+		case "Attack Fervor":
+			effect.name = "Attack Fervor";
+			effect.desc = "Basic Attacks grant 10% Move Speed for 1.5 seconds"
+			effect.type = "Passive"; 
+			effect.tags = ["movespeed"];
+			break;
+			
+	
+		case "Frenzy":
+			effect.name = "Frenzy";
+			effect.desc = "Activate to gain 20 Attack Damage and 10% Attack Speed while increasing damage taken by 25% for 5s (60s Cooldown)."
+			effect.type = "Active"; 
+			effect.tags = ["attackspeed", "attackdamage"];
+			break;
+			
+	
+		case "Intensity":
+			effect.name = "Intensity";
+			effect.desc = "Toggle on to spend 3% of your current Will to deal bonus Attack Damage equal to 2 times the spent Will to all targets of single-target skills and basic attacks."
+			effect.type = "Active"; 
+			break;
+			
+		case "Time Anchor":
+			effect.name = "Time Anchor";
+			effect.desc = "Activate once to record a position. Activate again within 5 seconds to return to that position (60s Cooldown)."
+			effect.type = "Active"; 
+			break;
+			
+		case "Purge":
+			effect.name = "Purge";
+			effect.desc = "Activate to purge negative status effects (60s Cooldown)."
+			effect.type = "Active"; 
+			break;
+		
+		case  "Targeting System":
+			effect.name = "Targeting System";
+			effect.desc = "Activate on a target to slow them by 20% and mark them for 4s. Allies who basic attack marked targets are healed 10 each hit (60s Cooldown)."
+			effect.type = "Active"; 
+			effect.tags = ["healthregen"];
+			break;
+			
+		case  "Mercury's Gift":
+			effect.name = "Mercury's Gift";
+			effect.desc = "Grant a 30% Move Speed buff to all nearby allies for 4s (60s Cooldown)."
+			effect.type = "Active"; 
+			effect.tags = ["movespeed"];
+			break;
+			
+		case  'Lazarus Effect':
+			effect.name = "Lazarus Effect";
+			effect.desc = "If you would fall to 0 health, you instead become invulnerable and unable to act for 4 seconds before returning to life at 25% Health and 50% Will (5 minute cooldown)."
+			effect.type = "Passive"; 
+			break;
+		
+		case 'Bastion':
+			effect.name = "Bastion";
+			effect.desc = "Activate to reduce damage taken by 25% and reduce damage dealt by 25% for 3 seconds(60s Cooldown)."
+			effect.type = "Active"; 
+			break;	
+	
+		case 'Protection Field':
+			effect.name = "Protection Field";
+			effect.desc = "Grants a temporary 40 + 10 per level Health shield to you and nearby allies that lasts for 4s (60s Cooldown)."
+			effect.type = "Active";
+			break;	
+			
+		case 'Mystical Conversion':
+			effect.name = "Mystical Conversion";
+			effect.desc = "Activate to grant Power Armor equal to 25% of your Attack Armor for 3s (60s Cooldown)."
+			effect.type = "Active";
+			effect.tags = ["powerarmor"];
+			break;	
+	
+		case 'Stasis Field':
+			effect.name = "Stasis Field";
+			effect.desc = "Activate to become invulnerable, untargetable, immobile, and unable to act for 2s (60s Cooldown)."
+			effect.type = "Active";
+			break;
+	
+	
+		case 'Energy Blast':
+			effect.name = "Energy Blast";
+			effect.desc = "Activate to deal 15% of your target's current Health as Power Damage and increase further damage you deal to them by 10% for 5s (60s Cooldown)."
+			effect.type = "Active";
+			effect.tags = ["powerdamage"];
+			break;
+			
+		case 'Blood Spirit':
+			effect.name = "Blood Spirit";
+			effect.desc = "Releases a restless spirit to seek out the nearest enemy champion, traveling up to 35m. If the spirit reaches them, the champion will be slowed and revealed for 5s. You can release 3 spirits before you must refill by returning to base.";
+			effect.type = "Active";
+			break;
+		case 'Scanning':
+			effect.name = "Scanning";
+			effect.desc = "Place a device which reveals stealthed enemies and gives vision into stealth fields within the target area for 8s (60s cooldown).";
+			effect.type = "Active";
+			break;
+		case 'Blink Jump':
+			effect.name = "Blink Jump";
+			effect.desc = "Activate to immediately blink to a nearby location up to 5m away (120s cooldown). Cannot be used for 3 seconds after taking damage.";
+			effect.type = "Active";
+			break;
+			
+		case 'Tektite Vial':
+			effect.name = "Tektite Vial";
+			effect.desc = "Restores 100 Health and 100 Will over 15 seconds. Each use consumes 1 of 3 charges. Charges are refreshed when returning to base.";
+			effect.type = "Active";
+			effect.tags = ["healthregen", "willregen"];
+			break;
+			
+		case 'Bleed Tunneling':
+			effect.name = "Bleed Tunneling";
+			effect.desc = "Target an Enviromental Object to create an entrance.  Target a second Environmental Object to create an exit and open a connected portal for 15s. Allies can right click to use the entrance and travel to the exit.";
+			effect.type = "Consumable";
+			break;
+			
 		case 'willbattery':
 			effect.name = "Will Battery";
 			effect.desc = "Gain 4 Max Will whenever you use a skill that costs will (3 second Cooldown). Bonus caps at +500 bonus Will.";
+			effect.type = "Passive"; 
 			effect.tags = ["will"];
 			break;
 		case 'willforce':
 			effect.name = "Will Force";
 			effect.desc = "Grants Power Damage equal to 3% of your Max Will.";
 			effect.tags = ["powerdamage"];
+			effect.type = "Passive"; 
 			break;
 		case 'marauderedge':
 			effect.name = "Marauder Edge";
 			effect.desc = "+10 Basic Attack Damage to Creatures (Bypasses Armor)";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'marauderburst1':
 			effect.name = "Marauder Burst 1";
 			effect.desc = "+ 10% Damage to Creatures";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'marauderburst2':
 			effect.name = "Marauder Burst 2";
 			effect.desc = "+ 15% Damage to Creatures";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'marauderburst3':
 			effect.name = "Marauder Burst 3";
 			effect.desc = "+ 20% Damage to Creatures";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'marauderburst4':
 			effect.name = "Marauder Burst 4";
 			effect.desc = "+ 25% Damage to Creatures";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'deadly':
 			effect.name = "Deadly";
 			effect.desc = "+ 50% Critical Damage";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'wounding':
 			effect.name = "Wounding";
 			effect.desc = " Targets hit by your Basic Attacks have their healing and regeneration reduced by 50% for 1.5 seconds";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'piercing1':
 			effect.name = "Piercing 1";
 			effect.desc = "+ 10 Attack Penetration";
 			effect.tags = ["attackpenetration"];
+			effect.type = "Passive"; 
 			break;
 
 		case 'piercing2':
 			effect.name = "Piercing 2";
 			effect.desc = "+ 15 Attack Penetration";
 			effect.tags = ["attackpenetration"];
+			effect.type = "Passive"; 
 			break;
 
 		case 'desperatespeed':
 			effect.name = "Desperate Speed";
 			effect.desc = "Falling below 50% health gain 20% Attack Speed and 10 Movement Speed until you do not take or deal damage for 5 seconds";
 			effect.tags = ["movespeed", "attackspeed"];
+			effect.type = "Passive"; 
 			break;
 
 		case 'powerburst':
 			effect.name = "Power Burst";
 			effect.desc = "Gain 50 Power Damage for 3 seconds every 5th Basic Attack.";
 			effect.tags = ["powerdamage"];
+			effect.type = "Passive"; 
 			break;
 
 		case 'attackharvest':
 			effect.name = "Attack Harvest";
 			effect.desc = "Gain 2 Attack Damage each minute and with each Champion Kill or Assist (max 60 Attack Damage).";
 			effect.tags = ["attackdamage"];
+			effect.type = "Passive"; 
 			break;
 
 		case 'attackharrier':
 			effect.name = "Attack Harrier";
-			effect.desc = "Basic Attacks slow your target's Move Speed by 10% for 1.5 seconds (7% slow for Ranged Basic Attacks). Max 3 stacks.";
+			effect.desc = "Basic Attacks slow your target's Move Speed by 30% decaying for 2 seconds (20% slow for Ranged Basic Attacks).";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'shockwave1':
 			effect.name = "Shockwave 1";
-			effect.desc = "Your Basic Attacks explode, dealing 10% of your Total Attack Damage to other enemies nearby.";
+			effect.desc = "Your Basic Attacks explode, dealing 5 + 10% of your Total Attack Damage to other enemies nearby.";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'shockwave2':
 			effect.name = "Shockwave 2";
-			effect.desc = "Your Basic Attacks explode, dealing 5 damage + 30% of your Total Attack Damage to other enemies nearby.";
+			effect.desc = "Your Basic Attacks explode, dealing 10 damage + 30% of your Total Attack Damage to other enemies nearby.";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'shockwave3':
 			effect.name = "Shockwave 3";
-			effect.desc = "Your Basic Attacks explode, dealing 10 damage + 50% of your Total Attack Damage to other enemies nearby.";
+			effect.desc = "Your Basic Attacks explode, dealing 25 damage + 50% of your Total Attack Damage to other enemies nearby.";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'attackdamagecollector':
 			effect.name = "Attack Damage Collector";
 			effect.desc = "+1 Attack Damage and 0.2% Attack Lifesteal when you collect a coin (max 30 stacks, lose half on death).";
+			effect.type = "Passive"; 
 			effect.tags = ["attackdamage", "attacklifesteal"];
 			break;
 			
 		case 'razor1':
 			effect.name = "Razor 1";
 			effect.desc = "+15% Attack Penetration";
+			effect.type = "Passive"; 
 			effect.tags = ["attackpenetration"];
 			break;
 			
 		case 'razor2':
 			effect.name = "Razor 2";
 			effect.desc = "+35% Attack Penetration";
+			effect.type = "Passive"; 
 			effect.tags = ["attackpenetration"];
 			break;
 			
 		case 'atlantisaura':
 			effect.name = "Atlantis Aura";
 			effect.desc = "+15% Attack Speed and +10% Attack Lifesteal for all nearby allies.";
+			effect.type = "Passive"; 
 			effect.tags = ["attackspeed", "attacklifesteal"];
 			break;
 			
 		case 'refundable':
 			effect.name = "Refundable";
 			effect.desc = "You can sell this Artifact back for full value.";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'kineticarmor':
 			effect.name = "Kinetic Armor";
 			effect.desc = "Your Basic Attacks steal 5 Attack Armor for 5 seconds (max 5 stacks).";
+			effect.type = "Passive"; 
 			effect.tags = ["attackarmor", "attackpenetration"];
 			break;
 						
 		case 'desperatestrength':
 			effect.name = "Desperate Strength";
 			effect.desc = "Gain +1 Attack Damage for every 2% Health you are missing.";
+			effect.type = "Passive"; 
 			effect.tags = ["attackdamage"];
 			break;
 						
 		case 'responseshield':
 			effect.name = "Response Shield";
 			effect.desc = "Gain a shield that blocks 200 damage for 5 seconds when you fall below 30% Health.";
+			effect.type = "Passive"; 
 			break;
 						
 		case 'desperateendurance':
 			effect.name = "Desperate Endurance";
-			effect.desc = "Falling below 30% health, gain 10% Attack and Power Lifesteal until you do not take or deal damage for 5 seconds.";
+			effect.desc = "Falling below 30% health, gain 10% Attack and Power Lifesteal until you do not take or deal damage for 5 seconds. (30s Cooldown).";
 			effect.tags = ["attacklifesteal", "powerlifesteal"];
+			effect.type = "Passive"; 
 			break;
 						
 		case 'forceofwill':
 			effect.name = "Force of Will";
 			effect.desc = "Grants Attack Damage equal to 2% of your Max Will.";
+			effect.type = "Passive"; 
 			effect.tags = ["attackdamage"];
 			break;
 						
 		case 'slayer':
 			effect.name = "Slayer";
 			effect.desc = "Your Basic Attacks deal 5% of you target's current Health as bonus Power Damage.";
+			effect.type = "Passive"; 
 			break;
 						
 		case 'oaaura':
 			effect.name = "Oa Aura";
 			effect.desc = "-15 Power Armor for all nearby enemies.";
+			effect.type = "Passive"; 
 			effect.tags = ["powerpenetration"];
 			break;
 						
 		case 'investment':
 			effect.name = "Investment (Stacking)";
-			effect.desc = "Gain 5 gold every 10 seconds";
+			effect.desc = "Gain 3 gold every 10 seconds";
+			effect.type = "Passive"; 
 			effect.tags = ["credits"];
 			break;		
 			
 		case 'refundable':
 			effect.name = "Refundable";
 			effect.desc = "You can sell this Artifact back for full value";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'medisys':
 			effect.name = "Medisys";
 			effect.desc = "On leveling up, regain 150 Health and Will over 10 seconds.";
+			effect.type = "Passive"; 
 			effect.tags = ["healthregen", "willregen"];
 			break;
 						
 		case 'armorcollector':
 			effect.name = "Armor Collector";
 			effect.desc = "+1 Attack and Power Armor when you collect a coin (max 30 Attack and Power Armor, lose half on death).";
+			effect.type = "Passive"; 
 			effect.tags = ["attackarmor", "powerarmor"];
 			break;
 						
 		case 'healthharvest':
 			effect.name = "Health Harvest";
 			effect.desc = "Gain 15 Health each minute and with each Champion Kill or Assist (max 450 Health)."
+			effect.type = "Passive"; 
 			effect.tags = ["health"];
 			break;
 					
 		case 'healthbalance':
 			effect.name = "Health Balance";
 			effect.desc = "Gain +1% Health Regen per 1% of Health you are missing.";
+			effect.type = "Passive"; 
 			effect.tags = ["healthregen"];
 			break;
 							
 		case 'enforcement':
 			effect.name = "Enforcement";
 			effect.desc = "Gain 2% of your Max Health as additional Attack Damage.";
+			effect.type = "Passive"; 
 			effect.tags = ["health"];
 			break;
 						
 		case 'healthcollector':
 			effect.name = "Health Collector";
 			effect.desc = "+7.5 Health and +1.5 Health Regen when you collect a coin (max 225 Health, 45 Health Regen, lose half on death).";
+			effect.type = "Passive"; 
 			effect.tags = ["health", "healthregen"];
 			break;
 						
 		case 'skillblock':
 			effect.name = "Skill Block";
-			effect.desc = "Grants a Skill Shield that prevents the damage and effects of the next enemy skill. This effect has a 30 second cooldown.";
+			effect.desc = "Grants a Skill Shield that prevents the damage and effects of the next enemy skill(60s cooldown).";
+			effect.type = "Passive"; 
 			break;
 						
 		case 'olympusaura':
 			effect.name = "Olympus Aura";
 			effect.desc = "+15 Attack Armor, +15 Power Armor, and +10 Health Regen per 10s for all nearby allies.";
+			effect.type = "Passive"; 
 			effect.tags = ["attackarmor", "powerarmor", "healthregen"];
 			break;
 						
 		case 'dampeningaura':
 			effect.name = "Dampening Aura";
 			effect.desc = "-20% Attack Speed for all nearby enemies.";
+			effect.type = "Passive"; 
 			break;
 						
 		case 'mirrordefense1':
 			effect.name = "Mirror Defense";
 			effect.desc = "+10% Attack Reflect";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'mirrordefense2':
 			effect.name = "Mirror Defense";
 			effect.desc = "+20% Attack Reflect";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'mirrordefense3':
 			effect.name = "Mirror Defense";
 			effect.desc = "+30% Attack Reflect";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'vitality':
 			effect.name = "Vitality";
 			effect.desc = "+20% Healing Received";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'willbalance':
 			effect.name = "Will Balance";
 			effect.desc = "Gain +1% Will Regen per 1% of Will you are missing";
+			effect.type = "Passive"; 
 			effect.tags = ["willregen"];
 			break;
 			
 		case 'powerdamagecollector':
 			effect.name = "Power Damage Collector";
 			effect.desc = "+1.5 Power Damage when you collect a coin (max 45 Power Damage, lose half on death).";
+			effect.type = "Passive"; 
 			effect.tags = ["powerdamage"];
 			break;
 			
 		case 'willrestore':
 			effect.name = "Will Restore";
 			effect.desc = "Restores 8 Will when you collect a coin.";
+			effect.type = "Passive"; 
 			effect.tags = ["willregen"];
 			break;
 			
 		case 'shrapnel':
 			effect.name = "Shrapnel";
 			effect.desc = "After skill use, your next Basic Attack damages enemies behind your target equal to 25 + 50% of Power Damage (2s cooldown).";
+			effect.type = "Passive"; 
 			break;
 			
 			
 		case 'skilledattack1':
 			effect.name = "Skilled Attack 1";
-			effect.desc = "Placeholder";
+			effect.desc = "After skill use, your next Basic Attack deals additional Power Damage equal to 25 + 50% of Power Damage or 100% base Attack Damage(2s cooldown). Activate to toggle.";
+			effect.type = "Active";
 			break;
 			
 		case 'skilledattack2':
 			effect.name = "Skilled Attack 2";
-			effect.desc = "After skill use, your next Basic Attack deals additional Power Damage equal to 50 + 75% of Power Damage(2s cooldown)";
+			effect.desc = "After skill use, your next Basic Attack deals additional Power Damage equal to 50 + 75% of Power Damage or 150% base Attack Damage(2s cooldown). Activate to toggle.";
+			effect.type = "Active";
 			break;
 			
 		case 'arcane1':
 			effect.name = "Arcane 1";
 			effect.desc = "+15% Power Penetration";
 			effect.tags = ["powerpenetration"];
+			effect.type = "Passive"; 
 			break;
 			
 		case 'arcane2':
 			effect.name = "Arcane 2";
 			effect.desc = "+35% Power Penetration";
 			effect.tags = ["powerpenetration"];
+			effect.type = "Passive"; 
 			break;
 		
 		case 'powerfeedback':
 			effect.name = "Power Feedback";
 			effect.desc = "+30% Power Damage.";
 			effect.tags = ["powerdamage"];
+			effect.type = "Passive"; 
 			break;
 		
 		case 'qwardaura':
 			effect.name = "Qward Aura";
 			effect.desc = "+20 Power Damage and +10% Power Lifesteal for all nearby allies.";
+			effect.type = "Passive"; 
 			effect.tags = ["powerdamage", "powerlifesteal"];
 			break;
 		
 		case 'powerharvest':
 			effect.name = "Power Harvest";
 			effect.desc = "Gain 3 Power Damage each minute with each Champion Kill or Assist (max 90 Power Damage)";
+			effect.type = "Passive"; 
 			effect.tags = ["powerdamage"];
 			break;
 		
 		case 'chargedarmor':
 			effect.name = "Charged Armor";
 			effect.desc = "Your Basic Attacks steal 5 Power Armor for 5 seconds(max 5 stacks)";
+			effect.type = "Passive"; 
 			effect.tags = ["powerpenetration", "powerarmor"];
 			break;
 		
 		case 'chargedattack':
 			effect.name = "Charged Attack";
 			effect.desc = "Your Basic Attacks deal bonus Power Damage equal to 10 + 10% of your Power Damage.";
+			effect.type = "Passive"; 
 			break;
 		
 		case 'disintegration':
 			effect.name = "Disintegration";
 			effect.desc = "Dealing damage from skills applies an effect dealing 2% of the target's current Health per second for 3 seconds";
+			effect.type = "Passive"; 
 			break;
 			
-		case 'devastating1':
-			effect.name = "Devastating 1";
-			effect.desc = "+10 Power Penetration";
-			effect.tags = ["powerpenetration"];
-			break;
-			
-		case 'devastating2':
-			effect.name = "Devastating 2";
+		case 'devastating':
+			effect.name = "Devastating";
 			effect.desc = "+15 Power Penetration";
+			effect.type = "Passive"; 
 			effect.tags = ["powerpenetration"];
 			break;
 			
 		case 'skillharrier':
 			effect.name = "Skill Harrier";
 			effect.desc = "Targets damaged by your skills lose 20% Move Speed for 1.5 seconds";
+			effect.type = "Passive"; 
 			break;
 			
 		case 'attacksyphon':
 			effect.name = "Attack Syphon";
 			effect.desc = "Autoattacks heal you for 5 health.";
+			effect.type = "Passive"; 
 			effect.tags = ["healthregen"];
 			break;
 		case 'willpack':
 			effect.name = "Will Pack";
 			effect.desc = "Restores 150 Will over 15 seconds.";
+			effect.type = "Consumable"; 
 			effect.tags = ["willregen"];
 			break;
 		case 'healthpack':
 			effect.name = "Health Pack";
 			effect.desc = "Restores 150 Health over 15 seconds.";
+			effect.type = "Consumable"; 
 			effect.tags = ["healthregen"];
 			break;
 			
