@@ -37,8 +37,7 @@ function createItem(string){
 		//
 		case "Abin Sur's Lantern":
 
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Abin Sur's Lantern";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -49,8 +48,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Abin Sur's Lantern";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -59,11 +57,10 @@ function createItem(string){
 				stages[1].stats.will = 150;
 				stages[1].stats.willregen = 5;
 				stages[1].stats.powerdamage = 20;
-				stages[1].effect1 = getItemEffect('willbattery');
+				stages[1].effects.push(getItemEffect('willbattery'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Abin Sur's Lantern";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -72,12 +69,11 @@ function createItem(string){
 				stages[2].stats.will = 200;
 				stages[2].stats.willregen = 5;
 				stages[2].stats.powerdamage = 40;
-				stages[2].effect1 = getItemEffect('willbattery');
-				stages[2].effect2 = getItemEffect('willforce');
+				stages[2].effects.push(getItemEffect('willbattery'));
+				stages[2].effects.push(getItemEffect('willforce'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Abin Sur's Lantern";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -86,8 +82,8 @@ function createItem(string){
 				stages[3].stats.will = 400;
 				stages[3].stats.willregen = 8;
 				stages[3].stats.powerdamage = 80;
-				stages[3].effect1 = getItemEffect('willbattery');
-				stages[3].effect2 = getItemEffect('willforce');
+				stages[3].effects.push(getItemEffect('willbattery'));
+				stages[3].effects.push(getItemEffect('willforce'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 			
@@ -95,8 +91,7 @@ function createItem(string){
 		//	Coda Blade
 		//	
 		case "Coda Blade":
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Coda Blade";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -105,8 +100,7 @@ function createItem(string){
 				stages[0].stats.attackdamage = 12;
 				stages[0].tables = createItemTooltip(stages[0]);
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Coda Blade";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -115,27 +109,25 @@ function createItem(string){
 				stages[1].stats.attackdamage = 25;
 				stages[1].tables = createItemTooltip(stages[1]);
 					
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Coda Blade";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1750;
 				stages[2].stats.sell = 1125;
 				stages[2].stats.attackdamage = 40;
-				stages[2].effect1 = getItemEffect('piercing1');
+				stages[2].effects.push(getItemEffect('piercing1'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Coda Blade";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2500;
 				stages[3].stats.sell = 1875;
 				stages[3].stats.attackdamage = 40;
-				stages[3].effect1 = getItemEffect('wounding');
-				stages[3].effect1 = getItemEffect('piercing2');
+				stages[3].effects.push(getItemEffect('wounding'));
+				stages[3].effects.push(getItemEffect('piercing2'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -146,8 +138,7 @@ function createItem(string){
 				
 		case "Cheetah's Claw":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Cheetah's Claw";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -157,8 +148,7 @@ function createItem(string){
 				stages[0].stats.attackspeed = 4;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Cheetah's Claw";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -168,8 +158,7 @@ function createItem(string){
 				stages[1].stats.attackspeed = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Cheetah's Claw";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -179,8 +168,7 @@ function createItem(string){
 				stages[2].stats.attackspeed = 15;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Cheetah's Claw";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -188,7 +176,7 @@ function createItem(string){
 				stages[3].stats.sell = 1500;
 				stages[3].stats.attacklifesteal = 15;
 				stages[3].stats.attackspeed = 20;
-				stages[3].effect1 = getItemEffect('desperatespeed');
+				stages[3].effects.push(getItemEffect('desperatespeed'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -197,19 +185,17 @@ function createItem(string){
 		//
 		case "Shade's Cane":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Shade's Cane";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
 				stages[0].stats.sell = 225;
 				stages[0].stats.attackdamage = 5;
-				stages[0].effect1 = getItemEffect('powerburst');
+				stages[0].effects.push(getItemEffect('powerburst'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Shade's Cane";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -217,11 +203,10 @@ function createItem(string){
 				stages[1].stats.sell = 750;
 				stages[1].stats.attackdamage = 20;
 				stages[1].stats.powerdamage = 15;
-				stages[1].effect1 = getItemEffect('powerburst');
+				stages[1].effects.push(getItemEffect('powerburst'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Shade's Cane";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -229,7 +214,7 @@ function createItem(string){
 				stages[2].stats.sell = 1500;
 				stages[2].stats.attackdamage = 40;
 				stages[2].stats.powerdamage = 30;
-				stages[2].effect1 = getItemEffect('powerburst');
+				stages[2].effects.push(getItemEffect('powerburst'));
 				stages[2].tables = createItemTooltip(stages[2]);	
 				
 				return stages;
@@ -238,8 +223,7 @@ function createItem(string){
 		//	Joker's Crowbar
 		//
 		case "Joker's Crowbar":
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Joker's Crowbar";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -248,23 +232,21 @@ function createItem(string){
 				stages[0].stats.attackdamage = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Joker's Crowbar";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1000;
 				stages[1].stats.sell = 750;
 				stages[1].stats.attackdamage = 15;
-				stages[1].effect1 = getItemEffect('attackharvest');
+				stages[1].effects.push(getItemEffect('attackharvest'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				return stages;
 		//
 		//	Lobo's Chain
 		//
 		case "Lobo's Chain":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Lobo's Chain";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -274,8 +256,7 @@ function createItem(string){
 				stages[0].stats.health = 100;
 				stages[0].tables = createItemTooltip(stages[0]);
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Lobo's Chain";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -285,8 +266,7 @@ function createItem(string){
 				stages[1].stats.attackdamage = 20;
 				stages[1].tables = createItemTooltip(stages[1]);
 					
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Lobo's Chain";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -296,8 +276,7 @@ function createItem(string){
 				stages[2].stats.attackdamage = 30;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Lobo's Chain";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -305,7 +284,7 @@ function createItem(string){
 				stages[3].stats.sell = 2625;
 				stages[3].stats.health = 400;
 				stages[3].stats.attackdamage = 30;
-				stages[3].effect1 = getItemEffect('attackharrier');
+				stages[3].effects.push(getItemEffect('attackharrier'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -314,8 +293,7 @@ function createItem(string){
 		//	Huntress' Crossbow
 		//
 		case "Huntress' Crossbow":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Huntress' Crossbow";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -325,8 +303,7 @@ function createItem(string){
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Huntress' Crossbow";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -336,8 +313,7 @@ function createItem(string){
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Huntress' Crossbow";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -353,8 +329,7 @@ function createItem(string){
 		//	Mega Rod
 		//
 		case "Mega Rod":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Mega Rod";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -362,11 +337,10 @@ function createItem(string){
 				stages[0].stats.sell = 750;
 				stages[0].stats.attackdamage = 10;
 				stages[0].stats.attackspeed = 10;
-				stages[0].effect1 = getItemEffect('shockwave1');
+				stages[0].effects.push(getItemEffect('shockwave1'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Mega Rod";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -374,11 +348,10 @@ function createItem(string){
 				stages[1].stats.sell = 1500;
 				stages[1].stats.attackdamage = 20;
 				stages[1].stats.attackspeed = 20;
-				stages[1].effect1 = getItemEffect('shockwave2');
+				stages[1].effects.push(getItemEffect('shockwave2'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Mega Rod";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -386,7 +359,7 @@ function createItem(string){
 				stages[2].stats.sell = 2250;
 				stages[2].stats.attackdamage = 30;
 				stages[2].stats.attackspeed = 30;
-				stages[2].effect1 = getItemEffect('shockwave3');
+				stages[2].effects.push(getItemEffect('shockwave3'));
 				stages[2].tables = createItemTooltip(stages[2]);	
 				
 				return stages;
@@ -396,8 +369,7 @@ function createItem(string){
 		//
 		case 'Velocity 9 Implants':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Velocity 9 Implants";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -406,8 +378,7 @@ function createItem(string){
 				stages[0].stats.attackspeed = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Velocity 9 Implants";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -418,8 +389,7 @@ function createItem(string){
 				stages[1].stats.movespeed = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Velocity 9 Implants";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -430,8 +400,7 @@ function createItem(string){
 				stages[2].stats.attackspeed = 30;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Velocity 9 Implants";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -440,7 +409,7 @@ function createItem(string){
 				stages[3].stats.criticalchance = 20;
 				stages[3].stats.movespeed = 15;
 				stages[3].stats.attackspeed = 50;
-				stages[3].effect1 = getItemEffect('Attack Fervor');
+				stages[3].effects.push(getItemEffect('Attack Fervor'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 		//
@@ -448,8 +417,7 @@ function createItem(string){
 		//
 		case 'Soultaker Katana':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Soultaker Katana';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -459,8 +427,7 @@ function createItem(string){
 				stages[0].stats.attacklifesteal = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Soultaker Katana';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -470,8 +437,7 @@ function createItem(string){
 				stages[1].stats.attacklifesteal = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Soultaker Katana';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -479,11 +445,10 @@ function createItem(string){
 				stages[2].stats.sell = 1690;		
 				stages[2].stats.attackdamage = 20;
 				stages[2].stats.attacklifesteal = 10;
-				stages[2].effect1 = getItemEffect('attackdamagecollector');
+				stages[2].effects.push(getItemEffect('attackdamagecollector'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Soultaker Katana';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -491,7 +456,7 @@ function createItem(string){
 				stages[3].stats.sell = 2250;
 				stages[3].stats.attackdamage = 30;
 				stages[3].stats.attacklifesteal = 15;
-				stages[3].effect1 = getItemEffect('attackdamagecollector');
+				stages[3].effects.push(getItemEffect('attackdamagecollector'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 		//
@@ -499,26 +464,24 @@ function createItem(string){
 		//
 		case 'Atomic Axe':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Atomic Axe';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 1500;
 				stages[0].stats.sell =1125;
 				stages[0].stats.attackdamage = 40;
-				stages[0].effect1 = getItemEffect('razor1');
+				stages[0].effects.push(getItemEffect('razor1'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Atomic Axe';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 3000;
 				stages[1].stats.sell = 2250;
 				stages[1].stats.attackdamage = 60;
-				stages[1].effect1 = getItemEffect('razor2');
+				stages[1].effects.push(getItemEffect('razor2'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				return stages
 				
@@ -527,8 +490,7 @@ function createItem(string){
 		//		
 		case 'Atlantis Gambit':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Atlantis Gambit';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -537,38 +499,35 @@ function createItem(string){
 				stages[0].stats.attacklifesteal = 4;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Atlantis Gambit';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 750;
 				stages[1].stats.sell = 565;
 				stages[1].stats.attacklifesteal = 8;
-				stages[1].effect1 = getItemEffect('investment');
+				stages[1].effects.push(getItemEffect('investment'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Atlantis Gambit';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1750;		
 				stages[2].stats.sell = 1315;		
 				stages[2].stats.attacklifesteal = 8;
-				stages[2].effect1 = getItemEffect('atlantisaura');
+				stages[2].effects.push(getItemEffect('atlantisaura'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Atlantis Gambit';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2250;		
 				stages[3].stats.sell = 1690;		
 				stages[3].stats.attacklifesteal = 8;
-				stages[3].effect1 = getItemEffect('atlantisaura');
-				stages[3].effect2 = getItemEffect('Targeting System');
+				stages[3].effects.push(getItemEffect('atlantisaura'));
+				stages[3].effects.push(getItemEffect('Targeting System'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -577,8 +536,7 @@ function createItem(string){
 		//		
 		case 'Zeiss Goggles':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Zeiss Goggles';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -588,8 +546,7 @@ function createItem(string){
 				stages[0].stats.attackdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Zeiss Goggles';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -599,8 +556,7 @@ function createItem(string){
 				stages[1].stats.attackdamage = 20;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Zeiss Goggles';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -610,8 +566,7 @@ function createItem(string){
 				stages[2].stats.attackdamage = 30;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Zeiss Goggles';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -619,7 +574,7 @@ function createItem(string){
 				stages[3].stats.sell = 1875;
 				stages[3].stats.criticalchance = 20;
 				stages[3].stats.attackdamage = 40;
-				stages[3].effect1 = getItemEffect('Frenzy');
+				stages[3].effects.push(getItemEffect('Frenzy'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -629,8 +584,7 @@ function createItem(string){
 		//		
 		case 'Promethium Mace':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Promethium Mace';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -639,8 +593,7 @@ function createItem(string){
 				stages[0].stats.attackdamage = 6;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Promethium Mace';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -649,8 +602,7 @@ function createItem(string){
 				stages[1].stats.attackdamage = 12;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Promethium Mace';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -659,15 +611,14 @@ function createItem(string){
 				stages[2].stats.attackdamage = 24;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Promethium Mace';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1500;
 				stages[3].stats.sell = 1500;
 				stages[3].stats.attackdamage = 32;
-				stages[3].effect1 = getItemEffect('refundable');
+				stages[3].effects.push(getItemEffect('refundable'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -677,8 +628,7 @@ function createItem(string){
 		//		
 		case "Rip Hunter's Time Pack":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Rip Hunter's Time Pack";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -688,8 +638,7 @@ function createItem(string){
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Rip Hunter's Time Pack";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -699,8 +648,7 @@ function createItem(string){
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Rip Hunter's Time Pack";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -710,8 +658,7 @@ function createItem(string){
 				stages[2].stats.cdr = 10;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Rip Hunter's Time Pack";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -719,7 +666,7 @@ function createItem(string){
 				stages[3].stats.sell = 2250;
 				stages[3].stats.attackspeed = 40;
 				stages[3].stats.cdr = 15;
-				stages[3].effect1 = getItemEffect('Time Anchor');
+				stages[3].effects.push(getItemEffect('Time Anchor'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -729,8 +676,7 @@ function createItem(string){
 		//		
 		case "Claw of Horus":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Claw of Horus";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -740,8 +686,7 @@ function createItem(string){
 				stages[0].stats.attackdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Claw of Horus";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -752,8 +697,7 @@ function createItem(string){
 				stages[1].stats.attacklifesteal = 5;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Claw of Horus";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -762,7 +706,7 @@ function createItem(string){
 				stages[2].stats.attackdamage= 20;
 				stages[2].stats.attackarmor = 30;
 				stages[2].stats.attacklifesteal = 5;
-				stages[2].effect1 = getItemEffect('kineticarmor');
+				stages[2].effects.push(getItemEffect('kineticarmor'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;
@@ -772,8 +716,7 @@ function createItem(string){
 		//		
 		case "Batman's Utility Belt":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Batman's Utility Belt";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -784,8 +727,7 @@ function createItem(string){
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Batman's Utility Belt";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -796,8 +738,7 @@ function createItem(string){
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Batman's Utility Belt";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -809,8 +750,7 @@ function createItem(string){
 				stages[2].stats.cdr = 15;
 				stages[2].tables = createItemTooltip(stages[2]);
 							
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Batman's Utility Belt";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -820,7 +760,7 @@ function createItem(string){
 				stages[3].stats.health = 300;				
 				stages[3].stats.attackspeed = 20;
 				stages[3].stats.cdr = 15;
-				stages[3].effect1 = getItemEffect('Purge');
+				stages[3].effects.push(getItemEffect('Purge'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -830,8 +770,7 @@ function createItem(string){
 		//
 		case "Sword of Beowulf":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Sword of Beowulf";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -841,8 +780,7 @@ function createItem(string){
 				stages[0].stats.powerarmor = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Sword of Beowulf";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -852,8 +790,7 @@ function createItem(string){
 				stages[1].stats.powerarmor = 20;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Sword of Beowulf";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -861,8 +798,8 @@ function createItem(string){
 				stages[2].stats.sell = 2250;
 				stages[2].stats.attackdamage = 50;
 				stages[2].stats.powerarmor = 30;
-				stages[2].effect1 = getItemEffect('responseshield');
-				stages[2].effect2 = getItemEffect('desperateendurance');
+				stages[2].effects.push(getItemEffect('responseshield'));
+				stages[2].effects.push(getItemEffect('desperateendurance'));
 				stages[2].tables = createItemTooltip(stages[2]);	
 				
 				return stages;
@@ -873,8 +810,7 @@ function createItem(string){
 				
 		case "Deadshot's Visor":
 
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Deadshot's Visor";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -885,8 +821,7 @@ function createItem(string){
 				stages[0].stats.attackdamage = 5;
 				stages[0].tables = createItemTooltip(stages[0]);
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Deadshot's Visor";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -895,11 +830,10 @@ function createItem(string){
 				stages[1].stats.will = 150;
 				stages[1].stats.willregen = 5;
 				stages[1].stats.attackdamage = 10;
-				stages[1].effect1 = getItemEffect('willbattery');
+				stages[1].effects.push(getItemEffect('willbattery'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Deadshot's Visor";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -908,12 +842,11 @@ function createItem(string){
 				stages[2].stats.will = 200;
 				stages[2].stats.willregen = 5;
 				stages[2].stats.attackdamage = 20;
-				stages[2].effect1 = getItemEffect('willbattery');
-				stages[2].effect2 = getItemEffect('forceofwill');
+				stages[2].effects.push(getItemEffect('willbattery'));
+				stages[2].effects.push(getItemEffect('forceofwill'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Deadshot's Visor";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -922,9 +855,9 @@ function createItem(string){
 				stages[3].stats.will = 400;
 				stages[3].stats.willregen = 8;
 				stages[3].stats.attackdamage = 40;
-				stages[3].effect1 = getItemEffect('willbattery');
-				stages[3].effect2 = getItemEffect('forceofwill');
-				stages[3].effect3 = getItemEffect('Intensity');
+				stages[3].effects.push(getItemEffect('willbattery'));
+				stages[3].effects.push(getItemEffect('forceofwill'));
+				stages[3].effects.push(getItemEffect('Intensity'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 				
@@ -933,8 +866,7 @@ function createItem(string){
 		//		
 		case "Deathstroke's Claymore":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Deathstroke's Claymore";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -943,8 +875,7 @@ function createItem(string){
 				stages[0].stats.attackspeed = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Deathstroke's Claymore";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -952,7 +883,7 @@ function createItem(string){
 				stages[1].stats.sell = 2250;
 				stages[1].stats.attackdamage = 50;
 				stages[1].stats.attackspeed = 25;
-				stages[1].effect1 = getItemEffect('slayer');
+				stages[1].effects.push(getItemEffect('slayer'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				return stages
 		//
@@ -961,8 +892,7 @@ function createItem(string){
 				
 		case "Nil Cloak":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Nil Cloak";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -971,7 +901,7 @@ function createItem(string){
 				stages[0].stats.health = 125;
 				stages[0].stats.healthregen = 15;
 				stages[0].stats.attackarmor = 15;
-				stages[0].effect1 = getItemEffect('Toughness');
+				stages[0].effects.push(getItemEffect('Toughness'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
 				
@@ -980,8 +910,7 @@ function createItem(string){
 		//		
 		case 'Oa Gambit':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Oa Gambit';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -991,8 +920,7 @@ function createItem(string){
 				stages[0].stats.powerarmor = 6;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Oa Gambit';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1000,11 +928,10 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.powerdamage = 15;
 				stages[1].stats.powerarmor = 20;
-				stages[1].effect1 = getItemEffect('investment');
+				stages[1].effects.push(getItemEffect('investment'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Oa Gambit';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1012,11 +939,10 @@ function createItem(string){
 				stages[2].stats.sell = 1315;		
 				stages[2].stats.powerdamage = 50;
 				stages[2].stats.powerarmor = 30;
-				stages[2].effect1 = getItemEffect('oaaura');
+				stages[2].effects.push(getItemEffect('oaaura'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Oa Gambit';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1024,8 +950,8 @@ function createItem(string){
 				stages[3].stats.sell = 1690;		
 				stages[3].stats.powerdamage = 55;
 				stages[3].stats.powerarmor = 35;
-				stages[3].effect1 = getItemEffect('oaaura');
-				stages[3].effect2 = getItemEffect('Protection Field');
+				stages[3].effects.push(getItemEffect('oaaura'));
+				stages[3].effects.push(getItemEffect('Protection Field'));
 				stages[3].tables = createItemTooltip(stages[2]);
 				
 				return stages;		
@@ -1036,8 +962,7 @@ function createItem(string){
 		
 		case 'The Medusa Mask':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'The Medusa Mask';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1047,8 +972,7 @@ function createItem(string){
 				stages[0].stats.healthregen = 4;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'The Medusa Mask';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1059,8 +983,7 @@ function createItem(string){
 				stages[1].stats.willregen = 4;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'The Medusa Mask';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1069,11 +992,10 @@ function createItem(string){
 				stages[2].stats.health = 200;
 				stages[2].stats.healthregen = 10;
 				stages[2].stats.willregen = 6;
-				stages[2].effect1 = getItemEffect('medisys');
+				stages[2].effects.push(getItemEffect('medisys'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'The Medusa Mask';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1082,7 +1004,7 @@ function createItem(string){
 				stages[3].stats.health = 300;
 				stages[3].stats.healthregen = 20;
 				stages[3].stats.willregen = 10;
-				stages[3].effect1 = getItemEffect('medisys');
+				stages[3].effects.push(getItemEffect('medisys'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;	
@@ -1091,8 +1013,7 @@ function createItem(string){
 		//
 		case "Phantom Stranger's Necklace":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name ="Phantom Stranger's Necklace";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1102,8 +1023,7 @@ function createItem(string){
 				stages[0].stats.powerarmor = 6;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Phantom Stranger's Necklace";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1112,11 +1032,10 @@ function createItem(string){
 				stages[1].stats.attackarmor = 10;
 				stages[1].stats.powerarmor = 10;
 				stages[1].stats.cdr = 10;
-				stages[1].effect1 = getItemEffect('armorcollector');
+				stages[1].effects.push(getItemEffect('armorcollector'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Phantom Stranger's Necklace";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1125,7 +1044,7 @@ function createItem(string){
 				stages[2].stats.attackarmor = 30;
 				stages[2].stats.powerarmor = 30;
 				stages[2].stats.cdr = 15;
-				stages[2].effect1 = getItemEffect('armorcollector');
+				stages[2].effects.push(getItemEffect('armorcollector'));
 				stages[2].tables = createItemTooltip(stages[2]);	
 				
 				return stages;
@@ -1137,8 +1056,7 @@ function createItem(string){
 		
 		case 'The Crime Bible':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'The Crime Bible';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1148,8 +1066,7 @@ function createItem(string){
 				stages[0].stats.healthregen = 20;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'The Crime Bible';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1157,7 +1074,7 @@ function createItem(string){
 				stages[1].stats.sell = 750;
 				stages[1].stats.health = 150;
 				stages[1].stats.healthregen = 20;
-				stages[1].effect1 = getItemEffect('healthharvest');
+				stages[1].effects.push(getItemEffect('healthharvest'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				return stages;
 			
@@ -1167,8 +1084,7 @@ function createItem(string){
 			
 		case "Diana's Bracers":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Diana's Bracers";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1178,8 +1094,7 @@ function createItem(string){
 				stages[0].stats.healthregen = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name =  "Diana's Bracers";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1187,7 +1102,7 @@ function createItem(string){
 				stages[1].stats.sell = 1125;
 				stages[1].stats.resilience = 30;
 				stages[1].stats.healthregen = 25;
-				stages[1].effect1 = getItemEffect('healthbalance');
+				stages[1].effects.push(getItemEffect('healthbalance'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				return stages;
 		//
@@ -1196,8 +1111,7 @@ function createItem(string){
 			
 		case "Spear of Destiny":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Spear of Destiny";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1207,8 +1121,7 @@ function createItem(string){
 				stages[0].stats.powerarmor = 35;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name =  "Spear of Destiny";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1216,7 +1129,7 @@ function createItem(string){
 				stages[1].stats.sell = 1690;
 				stages[1].stats.attackdamage = 20;
 				stages[1].stats.powerarmor = 55;
-				stages[1].effect1 = getItemEffect('enforcement');
+				stages[1].effects.push(getItemEffect('enforcement'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				return stages;
 		//
@@ -1224,8 +1137,7 @@ function createItem(string){
 		//		
 		case 'Ruby of Life':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Ruby of Life';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1235,8 +1147,7 @@ function createItem(string){
 				stages[0].stats.healthregen = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Ruby of Life';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1244,13 +1155,12 @@ function createItem(string){
 				stages[1].stats.sell = 940;
 				stages[1].stats.health = 100;
 				stages[1].stats.healthregen = 10;
-				stages[1].effect1 = getItemEffect('healthcollector');
+				stages[1].effects.push(getItemEffect('healthcollector'));
 				stages[1].tables = createItemTooltip(stages[1]);
 			
 				
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Ruby of Life';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1258,12 +1168,11 @@ function createItem(string){
 				stages[2].stats.sell = 1690;
 				stages[2].stats.health = 400;
 				stages[2].stats.healthregen = 25;
-				stages[2].effect1 = getItemEffect('healthcollector');
+				stages[2].effects.push(getItemEffect('healthcollector'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
 		
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Ruby of Life';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1272,7 +1181,7 @@ function createItem(string){
 				stages[3].stats.health = 400;
 				stages[3].stats.healthregen = 25;
 				stages[3].stats.resilience = 15;
-				stages[3].effect1 = getItemEffect('healthcollector');
+				stages[3].effects.push(getItemEffect('healthcollector'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 		
@@ -1281,8 +1190,7 @@ function createItem(string){
 			//
 				case 'Entropy Aegis':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Entropy Aegis';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1292,8 +1200,7 @@ function createItem(string){
 				stages[0].stats.powerarmor = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Entropy Aegis';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1306,8 +1213,7 @@ function createItem(string){
 			
 				
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Entropy Aegis';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1316,12 +1222,11 @@ function createItem(string){
 				stages[2].stats.health = 200;
 				stages[2].stats.will = 100;
 				stages[2].stats.powerarmor = 60;
-				stages[2].effect1 = getItemEffect('skillblock');
+				stages[2].effects.push(getItemEffect('skillblock'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
 		
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Entropy Aegis';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1330,7 +1235,7 @@ function createItem(string){
 				stages[3].stats.health = 300;
 				stages[3].stats.will = 200;
 				stages[3].stats.powerarmor = 70;
-				stages[3].effect1 = getItemEffect('skillblock');
+				stages[3].effects.push(getItemEffect('skillblock'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 				
@@ -1339,8 +1244,7 @@ function createItem(string){
 		//
 		case "Ra's al Ghul's Robe":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Ra's al Ghul's Robe";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1350,8 +1254,7 @@ function createItem(string){
 				stages[0].stats.powerarmor = 30;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Ra's al Ghul's Robe";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1359,7 +1262,7 @@ function createItem(string){
 				stages[1].stats.sell = 2065;
 				stages[1].stats.attackarmor = 60;
 				stages[1].stats.powerarmor = 40;
-				stages[1].effect1 = getItemEffect('Lazarus Effect');
+				stages[1].effects.push(getItemEffect('Lazarus Effect'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
 				return stages;
@@ -1370,8 +1273,7 @@ function createItem(string){
 		//		
 		case 'Olympus Gambit':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Olympus Gambit';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1380,19 +1282,17 @@ function createItem(string){
 				stages[0].stats.health = 100;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Olympus Gambit';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 750;
 				stages[1].stats.sell = 565;
 				stages[1].stats.health = 250;
-				stages[1].effect1 = getItemEffect('investment');
+				stages[1].effects.push(getItemEffect('investment'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Olympus Gambit';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1401,12 +1301,11 @@ function createItem(string){
 				stages[2].stats.health = 250;
 				stages[2].stats.attackarmor = 15;
 				stages[2].stats.powerarmor = 15;
-				stages[2].effect1 = getItemEffect('olympusaura');
+				stages[2].effects.push(getItemEffect('olympusaura'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Olympus Gambit';
 				stages[3].level = 3;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1415,8 +1314,8 @@ function createItem(string){
 				stages[3].stats.health = 250;
 				stages[3].stats.attackarmor = 20;
 				stages[3].stats.powerarmor = 20;
-				stages[3].effect1 = getItemEffect('olympusaura');
-				stages[3].effect1 = getItemEffect('Bastion');
+				stages[3].effects.push(getItemEffect('olympusaura'));
+				stages[3].effects.push(getItemEffect('Bastion'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;		
@@ -1427,8 +1326,7 @@ function createItem(string){
 		//		
 		case "Hawkman's Harness":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Hawkman's Harness";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1437,8 +1335,7 @@ function createItem(string){
 				stages[0].stats.health = 80;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Hawkman's Harness";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1447,8 +1344,7 @@ function createItem(string){
 				stages[1].stats.health = 160;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Hawkman's Harness";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1457,15 +1353,14 @@ function createItem(string){
 				stages[2].stats.health = 240;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Hawkman's Harness";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1000;
 				stages[3].stats.sell = 1000;
 				stages[3].stats.health = 320;
-				stages[3].effect1 = getItemEffect('refundable');
+				stages[3].effects.push(getItemEffect('refundable'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;		
@@ -1475,8 +1370,7 @@ function createItem(string){
 		//		
 		case "Steel's Breastplate":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Steel's Breastplate";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1486,8 +1380,7 @@ function createItem(string){
 				stages[0].stats.attackarmor = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Steel's Breastplate";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1497,8 +1390,7 @@ function createItem(string){
 				stages[1].stats.attackarmor = 30;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Steel's Breastplate";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1507,9 +1399,9 @@ function createItem(string){
 				stages[2].stats.will = 300;
 				stages[2].stats.attackarmor = 60;
 				stages[2].stats.movespeed = 20;
-				stages[2].effect1 = getItemEffect("Mercury's Gift");
+				stages[2].effects.push(getItemEffect("Iron Will"));
 				stages[2].tables = createItemTooltip(stages[2]);
-				
+				 
 				return stages;	
 
 	
@@ -1518,8 +1410,7 @@ function createItem(string){
 		//		
 		case "Amulet of Isis":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Amulet of Isis";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1530,8 +1421,7 @@ function createItem(string){
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Amulet of Isis";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1542,8 +1432,7 @@ function createItem(string){
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Amulet of Isis";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1552,7 +1441,7 @@ function createItem(string){
 				stages[2].stats.health = 300;
 				stages[2].stats.willregen = 25;
 				stages[2].stats.cdr = 15;
-				stages[2].effect1 = getItemEffect("Mercury's Gift");
+				stages[2].effects.push(getItemEffect("Mercury's Gift"));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;			
@@ -1562,8 +1451,7 @@ function createItem(string){
 		//		
 		case "Metallo's Heart":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Metallo's Heart";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1573,8 +1461,7 @@ function createItem(string){
 				stages[0].stats.attackarmor = 30;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Metallo's Heart";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1585,8 +1472,7 @@ function createItem(string){
 				stages[1].stats.cdr = 15;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Metallo's Heart";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1595,7 +1481,7 @@ function createItem(string){
 				stages[2].stats.attackarmor = 50;
 				stages[2].stats.will = 350;
 				stages[2].stats.cdr = 20;
-				stages[2].effect1 = getItemEffect('dampeningaura');
+				stages[2].effects.push(getItemEffect('dampeningaura'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;			
@@ -1606,8 +1492,7 @@ function createItem(string){
 		//		
 		case "Helm of Fate":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();;
 				stages[0].name = "Helm of Fate";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1617,8 +1502,7 @@ function createItem(string){
 				stages[0].stats.attackarmor = 20;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Helm of Fate";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1628,8 +1512,7 @@ function createItem(string){
 				stages[1].stats.attackarmor = 35;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Helm of Fate";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1637,7 +1520,7 @@ function createItem(string){
 				stages[2].stats.sell = 2250;	
 				stages[2].stats.attackarmor = 50;
 				stages[2].stats.powerdamage = 90;
-				stages[2].effect1 = getItemEffect('Mystical Conversion');
+				stages[2].effects.push(getItemEffect('Mystical Conversion'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;		
@@ -1649,8 +1532,7 @@ function createItem(string){
 		//		
 		case "Suit of Sorrows":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Suit of Sorrows";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1659,37 +1541,34 @@ function createItem(string){
 				stages[0].stats.attackarmor = 35;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Suit of Sorrows";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1750;
 				stages[1].stats.sell = 1315;
 				stages[1].stats.attackarmor = 70;
-				stages[1].effect1 = getItemEffect('mirrordefense1');
+				stages[1].effects.push(getItemEffect('mirrordefense1'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Suit of Sorrows";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 2500;	
 				stages[2].stats.sell = 1875;	
 				stages[2].stats.attackarmor = 100;
-				stages[2].effect1 = getItemEffect('mirrordefense2');
+				stages[2].effects.push(getItemEffect('mirrordefense2'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();;
 				stages[3].name = "Suit of Sorrows";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 3000;
 				stages[3].stats.sell = 2250;
 				stages[3].stats.attackarmor = 100;
-				stages[3].effect1 = getItemEffect('mirrordefense3');
+				stages[3].effects.push(getItemEffect('mirrordefense3'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;	
@@ -1699,8 +1578,7 @@ function createItem(string){
 		//		
 		case "Kryptonian War Armor":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Kryptonian War Armor";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1710,8 +1588,7 @@ function createItem(string){
 				stages[0].stats.healthregen = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Kryptonian War Armor";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1721,8 +1598,7 @@ function createItem(string){
 				stages[1].stats.healthregen = 20;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Kryptonian War Armor";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1731,11 +1607,10 @@ function createItem(string){
 				stages[2].stats.powerarmor = 60;
 				stages[2].stats.movespeed = 10;
 				stages[2].stats.healthregen = 30;
-				stages[2].effect1 = getItemEffect('vitality');
+				stages[2].effects.push(getItemEffect('vitality'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Kryptonian War Armor";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1744,7 +1619,7 @@ function createItem(string){
 				stages[3].stats.powerarmor = 70;
 				stages[3].stats.healthregen = 40;
 				stages[3].stats.movespeed = 30;
-				stages[3].effect1 = getItemEffect('vitality');
+				stages[3].effects.push(getItemEffect('vitality'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;		
@@ -1753,8 +1628,7 @@ function createItem(string){
 		//		
 		case "Fragment of Mogo":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Fragment of Mogo";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1764,8 +1638,7 @@ function createItem(string){
 				stages[0].stats.attackarmor = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Fragment of Mogo";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1776,8 +1649,7 @@ function createItem(string){
 				stages[1].stats.cdr = 15;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Fragment of Mogo";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1786,7 +1658,7 @@ function createItem(string){
 				stages[2].stats.attackarmor = 45;
 				stages[2].stats.health = 300;
 				stages[2].stats.cdr = 15;
-				stages[2].effect1 = getItemEffect('Burning Core');
+				stages[2].effects.push(getItemEffect('Burning Core'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;			
@@ -1796,8 +1668,7 @@ function createItem(string){
 				
 		case "Nil Ring":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Nil Ring";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1814,8 +1685,7 @@ function createItem(string){
 		//		
 		case "Doctor Destiny's Dreamstone":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Doctor Destiny's Dreamstone";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1824,8 +1694,7 @@ function createItem(string){
 				stages[0].stats.willregen = 8;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Doctor Destiny's Dreamstone";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1833,11 +1702,10 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.willregen = 8;
 				stages[1].stats.powerarmor = 20;
-				stages[1].effect1 = getItemEffect('willbalance');
+				stages[1].effects.push(getItemEffect('willbalance'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Doctor Destiny's Dreamstone";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1847,7 +1715,7 @@ function createItem(string){
 				stages[2].stats.powerarmor = 20;
 				stages[2].stats.willregen = 16;
 				stages[2].stats.cdr = 10;
-				stages[2].effect1 = getItemEffect('willbalance');
+				stages[2].effects.push(getItemEffect('willbalance'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;		
@@ -1858,8 +1726,7 @@ function createItem(string){
 		//		
 		case "Gorilla Grodd's Helmet":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Gorilla Grodd's Helmet";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1869,8 +1736,7 @@ function createItem(string){
 				stages[0].stats.willregen = 3;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Gorilla Grodd's Helmet";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1880,8 +1746,7 @@ function createItem(string){
 				stages[1].stats.willregen = 10;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Gorilla Grodd's Helmet";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1892,8 +1757,7 @@ function createItem(string){
 				stages[2].stats.resilience = 10;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Gorilla Grodd's Helmet";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1912,8 +1776,7 @@ function createItem(string){
 		//		
 		case "The Logoz":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "The Logoz";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1921,11 +1784,10 @@ function createItem(string){
 				stages[0].stats.sell = 225;
 				stages[0].stats.will = 50;
 				stages[0].stats.powerdamage = 5;
-				stages[0].effect1 = getItemEffect('willrestore');
+				stages[0].effects.push(getItemEffect('willrestore'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "The Logoz";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1933,12 +1795,11 @@ function createItem(string){
 				stages[1].stats.sell = 750;
 				stages[1].stats.will = 150;
 				stages[1].stats.powerdamage = 20;
-				stages[1].effect1 = getItemEffect('powerdamagecollector');
-				stages[1].effect2 = getItemEffect('willrestore');
+				stages[1].effects.push(getItemEffect('powerdamagecollector'));
+				stages[1].effects.push(getItemEffect('willrestore'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "The Logoz";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1946,8 +1807,8 @@ function createItem(string){
 				stages[2].stats.sell = 1500;	
 				stages[2].stats.powerdamage = 55;
 				stages[2].stats.will = 300;
-				stages[2].effect1 = getItemEffect('powerdamagecollector');
-				stages[2].effect2 = getItemEffect('willrestore');
+				stages[2].effects.push(getItemEffect('powerdamagecollector'));
+				stages[2].effects.push(getItemEffect('willrestore'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;		
@@ -1955,8 +1816,7 @@ function createItem(string){
 		//	Fatality's Energy Lance
 		//
 		case "Fatality's Energy Lance":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Fatality's Energy Lance";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -1965,8 +1825,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Fatality's Energy Lance";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -1976,8 +1835,7 @@ function createItem(string){
 				stages[1].stats.cdr = 5;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Fatality's Energy Lance";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -1987,8 +1845,7 @@ function createItem(string){
 				stages[2].stats.cdr = 10;
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Fatality's Energy Lance";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -1996,7 +1853,7 @@ function createItem(string){
 				stages[3].stats.sell = 1690;
 				stages[3].stats.powerdamage = 60;
 				stages[3].stats.cdr = 15;
-				stages[3].effect1 = getItemEffect('Energy Blast');
+				stages[3].effects.push(getItemEffect('Energy Blast'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;
@@ -2005,8 +1862,7 @@ function createItem(string){
 		//	Eye of Ekron
 		//
 		case "Eye of Ekron":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Eye of Ekron";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2017,8 +1873,7 @@ function createItem(string){
 				stages[0].stats.will = 125;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();;
 				stages[1].name = "Eye of Ekron";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2028,11 +1883,10 @@ function createItem(string){
 				stages[1].stats.powerdamage = 10;
 				stages[1].stats.will = 150;
 				stages[1].stats.cdr = 10;
-				stages[1].effect1 = getItemEffect('shrapnel');
+				stages[1].effects.push(getItemEffect('shrapnel'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Eye of Ekron";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2042,11 +1896,10 @@ function createItem(string){
 				stages[2].stats.will = 200;
 				stages[2].stats.powerdamage = 20;
 				stages[2].stats.cdr = 20;
-				stages[2].effect1 = getItemEffect('shrapnel');
+				stages[2].effects.push(getItemEffect('shrapnel'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Eye of Ekron";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2056,7 +1909,7 @@ function createItem(string){
 				stages[3].stats.movespeed = 10;
 				stages[3].stats.powerdamage = 50;
 				stages[3].stats.cdr = 20;
-				stages[3].effect1 = getItemEffect('shrapnel');
+				stages[3].effects.push(getItemEffect('shrapnel'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;
@@ -2065,8 +1918,7 @@ function createItem(string){
 		//	Pandora's Box
 		//
 		case "Pandora's Box":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Pandora's Box";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2076,8 +1928,7 @@ function createItem(string){
 				stages[0].stats.cdr = 5;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Pandora's Box";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2087,8 +1938,7 @@ function createItem(string){
 				stages[1].stats.cdr = 10;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Pandora's Box";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2098,8 +1948,7 @@ function createItem(string){
 				stages[2].stats.cdr = 15;
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Pandora's Box";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2107,7 +1956,7 @@ function createItem(string){
 				stages[3].stats.sell = 1500;
 				stages[3].stats.powerlifesteal = 20;
 				stages[3].stats.cdr = 20;
-				stages[3].effect1 = getItemEffect('Blood Spirit');
+				stages[3].effects.push(getItemEffect('Blood Spirit'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;	
@@ -2116,8 +1965,7 @@ function createItem(string){
 		//
 		case "Psi-Scimitar":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Psi-Scimitar";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2127,8 +1975,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 20;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Psi-Scimitar";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2136,11 +1983,10 @@ function createItem(string){
 				stages[1].stats.sell = 1500;
 				stages[1].stats.attackdamage = 25;
 				stages[1].stats.powerdamage = 40;
-				stages[1].effect1 = getItemEffect('skilledattack1');
+				stages[1].effects.push(getItemEffect('skilledattack1'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Psi-Scimitar";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2148,7 +1994,7 @@ function createItem(string){
 				stages[2].stats.sell = 2250;
 				stages[2].stats.attackdamage = 40;
 				stages[2].stats.powerdamage = 60;
-				stages[2].effect1 = getItemEffect('skilledattack2');
+				stages[2].effects.push(getItemEffect('skilledattack2'));
 				stages[2].tables = createItemTooltip(stages[2]);	
 				
 				return stages;
@@ -2157,26 +2003,24 @@ function createItem(string){
 		//
 		case "The Book of Eternity":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "The Book of Eternity";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 1250;
 				stages[0].stats.sell = 940;
 				stages[0].stats.powerdamage = 50;
-				stages[0].effect1 = getItemEffect('arcane1');
+				stages[0].effects.push(getItemEffect('arcane1'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "The Book of Eternity";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 2500;
 				stages[1].stats.sell = 1875;
 				stages[1].stats.powerdamage = 80;
-				stages[1].effect1 = getItemEffect('arcane2');
+				stages[1].effects.push(getItemEffect('arcane2'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				return stages;
 		
@@ -2184,8 +2028,7 @@ function createItem(string){
 		//	The Starheart
 		//
 		case "The Starheart":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "The Starheart";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2194,8 +2037,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 45;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "The Starheart";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2204,8 +2046,7 @@ function createItem(string){
 				stages[1].stats.powerdamage = 90;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "The Starheart";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2214,15 +2055,14 @@ function createItem(string){
 				stages[2].stats.powerdamage = 135;
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "The Starheart";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 4000;
 				stages[3].stats.sell = 3000;
 				stages[3].stats.powerdamage = 140;
-				stages[3].effect1 = getItemEffect('powerfeedback');
+				stages[3].effects.push(getItemEffect('powerfeedback'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2232,8 +2072,7 @@ function createItem(string){
 		//		
 		case 'Qward Gambit':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Qward Gambit';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2242,8 +2081,7 @@ function createItem(string){
 				stages[0].stats.willregen = 8;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Qward Gambit';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2251,11 +2089,10 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.willregen = 8;
 				stages[1].stats.powerdamage = 20;
-				stages[1].effect1 = getItemEffect('investment');
+				stages[1].effects.push(getItemEffect('investment'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Qward Gambit';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2263,12 +2100,11 @@ function createItem(string){
 				stages[2].stats.sell = 1315;			
 				stages[2].stats.willregen = 8;		
 				stages[2].stats.powerdamage = 40;
-				stages[2].effect1 = getItemEffect('qwardaura');
+				stages[2].effects.push(getItemEffect('qwardaura'));
 				stages[2].tables = createItemTooltip(stages[2]);
 								
 								
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Qward Gambit';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2276,8 +2112,8 @@ function createItem(string){
 				stages[3].stats.sell = 1690;			
 				stages[3].stats.willregen = 8;		
 				stages[3].stats.powerdamage = 50;
-				stages[3].effect1 = getItemEffect('qwardaura');
-				stages[3].effect2 = getItemEffect('Scanning');
+				stages[3].effects.push(getItemEffect('qwardaura'));
+				stages[3].effects.push(getItemEffect('Scanning'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;	
@@ -2286,8 +2122,7 @@ function createItem(string){
 		//	Radion Shard
 		//
 		case "Radion Shard":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Radion Shard";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2296,8 +2131,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();;
 				stages[1].name = "Radion Shard";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2306,8 +2140,7 @@ function createItem(string){
 				stages[1].stats.powerdamage = 20;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Radion Shard";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2316,15 +2149,14 @@ function createItem(string){
 				stages[2].stats.powerdamage = 40;
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Radion Shard";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 1500;
 				stages[3].stats.sell = 1500;
 				stages[3].stats.powerdamage = 60;
-				stages[3].effect1 = getItemEffect('refundable');
+				stages[3].effects.push(getItemEffect('refundable'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2333,8 +2165,7 @@ function createItem(string){
 		//	Neron's Contract
 		//
 		case "Neron's Contract":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Neron's Contract";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2344,8 +2175,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 10;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Neron's Contract";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2355,8 +2185,7 @@ function createItem(string){
 				stages[1].stats.powerdamage = 25;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Neron's Contract";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2367,8 +2196,7 @@ function createItem(string){
 				stages[2].stats.powerdamage = 40;
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Neron's Contract";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2377,7 +2205,7 @@ function createItem(string){
 				stages[3].stats.powerdamage = 50;
 				stages[3].stats.attackarmor = 50;
 				stages[3].stats.movespeed = 10;
-				stages[3].effect1 = getItemEffect('Stasis Field');
+				stages[3].effects.push(getItemEffect('Stasis Field'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2387,8 +2215,7 @@ function createItem(string){
 		//
 		case "Two Face's Coin":
 				
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Two Face's Coin";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2397,15 +2224,14 @@ function createItem(string){
 				stages[0].stats.powerdamage = 30;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Two Face's Coin";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 1000;
 				stages[1].stats.sell = 750;
 				stages[1].stats.powerdamage = 30;
-				stages[1].effect1 = getItemEffect('powerharvest');
+				stages[1].effects.push(getItemEffect('powerharvest'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				return stages;
 		//		
@@ -2413,8 +2239,7 @@ function createItem(string){
 		//		
 		case 'Blue Scarab':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Blue Scarab';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2424,8 +2249,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Blue Scarab';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2433,11 +2257,10 @@ function createItem(string){
 				stages[1].stats.sell = 1125;
 				stages[1].stats.attackspeed = 20;
 				stages[1].stats.powerdamage = 15;
-				stages[1].effect1 = getItemEffect('chargedarmor');
+				stages[1].effects.push(getItemEffect('chargedarmor'));
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Blue Scarab';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2445,8 +2268,8 @@ function createItem(string){
 				stages[2].stats.sell = 1875;			
 				stages[2].stats.attackspeed = 40;		
 				stages[2].stats.powerdamage = 15;
-				stages[2].effect1 = getItemEffect('chargedarmor');
-				stages[2].effect2 = getItemEffect('chargedattack');
+				stages[2].effects.push(getItemEffect('chargedarmor'));
+				stages[2].effects.push(getItemEffect('chargedattack'));
 				stages[2].tables = createItemTooltip(stages[2]);
 				
 				return stages;	
@@ -2455,8 +2278,7 @@ function createItem(string){
 		//	Cosmic Staff
 		//
 		case "Cosmic Staff":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Cosmic Staff";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2465,8 +2287,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 25;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Cosmic Staff";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2475,27 +2296,25 @@ function createItem(string){
 				stages[1].stats.powerdamage = 50;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Cosmic Staff";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
 				stages[2].stats.buy = 1500;
 				stages[2].stats.sell = 1125;
 				stages[2].stats.powerdamage = 60;
-				stages[2].effect1 = getItemEffect('devastating');
+				stages[2].effects.push(getItemEffect('devastating'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Cosmic Staff";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2500;
 				stages[3].stats.sell = 1875;
 				stages[3].stats.powerdamage = 70;
-				stages[3].effect1 = getItemEffect('disintegration');
-				stages[3].effect2 = getItemEffect('devastating');
+				stages[3].effects.push(getItemEffect('disintegration'));
+				stages[3].effects.push(getItemEffect('devastating'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2504,8 +2323,7 @@ function createItem(string){
 		//	Atlantean Royal Seal
 		//
 		case "Atlantean Royal Seal":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Atlantean Royal Seal";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2515,8 +2333,7 @@ function createItem(string){
 				stages[0].stats.health = 100;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Atlantean Royal Seal";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2526,8 +2343,7 @@ function createItem(string){
 				stages[1].stats.health = 300;
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Atlantean Royal Seal";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2537,8 +2353,7 @@ function createItem(string){
 				stages[2].stats.powerdamage = 50;
 				stages[2].tables = createItemTooltip(stages[2]);
 
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Atlantean Royal Seal";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2546,7 +2361,7 @@ function createItem(string){
 				stages[3].stats.sell = 2250;
 				stages[3].stats.health = 400;
 				stages[3].stats.powerdamage = 60;
-				stages[3].effect1 = getItemEffect('skillharrier');
+				stages[3].effects.push(getItemEffect('skillharrier'));
 				stages[3].tables = createItemTooltip(stages[3]);				
 				
 				return stages;		
@@ -2555,8 +2370,7 @@ function createItem(string){
 		//	Eclipso's Diamond
 		//
 		case "Eclipso's Diamond":	
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Eclipso's Diamond";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2566,8 +2380,7 @@ function createItem(string){
 				stages[0].stats.powerdamage = 50;
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Eclipso's Diamond";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2584,8 +2397,7 @@ function createItem(string){
 		//		
 		case "Joe Chill's Revolver":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Joe Chill's Revolver";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2595,8 +2407,7 @@ function createItem(string){
 				stages[0].stats.attackdamage = 20;
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Joe Chill's Revolver";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2606,8 +2417,7 @@ function createItem(string){
 				stages[1].stats.attackdamage = 40;
 				stages[1].tables = createItemTooltip(stages[1]);
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = "Joe Chill's Revolver";
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2617,8 +2427,7 @@ function createItem(string){
 				stages[2].stats.attackdamage = 60;
 				stages[2].tables = createItemTooltip(stages[2]);
 				
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = "Joe Chill's Revolver";
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2626,7 +2435,7 @@ function createItem(string){
 				stages[3].stats.sell = 3000;
 				stages[3].stats.criticalchance = 25;
 				stages[3].stats.attackdamage = 70;
-				stages[3].effect1 = getItemEffect('deadly');
+				stages[3].effects.push(getItemEffect('deadly'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;
@@ -2636,20 +2445,18 @@ function createItem(string){
 		//		
 		case 'Marauder Shield':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Marauder Shield';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
 				stages[0].stats.sell = 225;
 				stages[0].stats.health = 75;
-				stages[0].effect1 = getItemEffect('marauderburst1');
-				stages[0].effect2 = getItemEffect('marauderdefense');
+				stages[0].effects.push(getItemEffect('marauderburst1'));
+				stages[0].effects.push(getItemEffect('marauderdefense'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Marauder Shield';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2657,14 +2464,13 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.health = 200;
 				stages[1].stats.healthregen = 20;
-				stages[1].effect1 = getItemEffect('marauderburst3');
-				stages[1].effect2 = getItemEffect('marauderdefense');
+				stages[1].effects.push(getItemEffect('marauderburst3'));
+				stages[1].effects.push(getItemEffect('marauderdefense'));
 				stages[1].tables = createItemTooltip(stages[1]);
 			
 				
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Marauder Shield';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2673,12 +2479,11 @@ function createItem(string){
 				stages[2].stats.health = 200;
 				stages[2].stats.healthregen = 20;
 				stages[2].stats.resilience = 10;
-				stages[2].effect1 = getItemEffect('marauderburst4');
+				stages[2].effects.push(getItemEffect('marauderburst4'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
 		
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Marauder Shield';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2687,7 +2492,7 @@ function createItem(string){
 				stages[3].stats.health = 400;
 				stages[3].stats.healthregen = 20;
 				stages[3].stats.resilience = 30;
-				stages[3].effect1 = getItemEffect('marauderburst4');
+				stages[3].effects.push(getItemEffect('marauderburst4'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 				
@@ -2696,19 +2501,17 @@ function createItem(string){
 		//		
 		case 'Marauder Ring':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Marauder Ring';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
 				stages[0].stats.sell = 225;
 				stages[0].stats.powerdamage = 10;
-				stages[0].effect1 = getItemEffect('marauderburst2');
+				stages[0].effects.push(getItemEffect('marauderburst2'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Marauder Ring';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2716,13 +2519,12 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.willregen = 10;
 				stages[1].stats.powerdamage = 20;
-				stages[1].effect1 = getItemEffect('marauderburst4');
+				stages[1].effects.push(getItemEffect('marauderburst4'));
 				stages[1].tables = createItemTooltip(stages[1]);
 			
 				
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Marauder Ring';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2730,12 +2532,11 @@ function createItem(string){
 				stages[2].stats.sell = 940;
 				stages[2].stats.powerdamage = 40;
 				stages[2].stats.willregen = 10;
-				stages[2].effect1 = getItemEffect('marauderburst4');
+				stages[2].effects.push(getItemEffect('marauderburst4'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
 		
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Marauder Ring';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2744,7 +2545,7 @@ function createItem(string){
 				stages[3].stats.cdr = 15;
 				stages[3].stats.powerdamage = 70;
 				stages[3].stats.willregen = 10;
-				stages[3].effect1 = getItemEffect('marauderburst4');
+				stages[3].effects.push(getItemEffect('marauderburst4'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 				
@@ -2753,20 +2554,18 @@ function createItem(string){
 		//		
 		case 'Marauder Knife':
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = 'Marauder Knife';
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
 				stages[0].stats.sell = 225;
 				stages[0].stats.attackdamage = 5;
-				stages[0].effect1 = getItemEffect('marauderburst1');
-				stages[0].effect2 = getItemEffect('marauderedge');
+				stages[0].effects.push(getItemEffect('marauderburst1'));
+				stages[0].effects.push(getItemEffect('marauderedge'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = 'Marauder Knife';
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
@@ -2774,14 +2573,13 @@ function createItem(string){
 				stages[1].stats.sell = 565;
 				stages[1].stats.attacklifesteal = 5;
 				stages[1].stats.attackdamage = 10;
-				stages[1].effect1 = getItemEffect('marauderburst2');
-				stages[1].effect2 = getItemEffect('marauderedge');
+				stages[1].effects.push(getItemEffect('marauderburst2'));
+				stages[1].effects.push(getItemEffect('marauderedge'));
 				stages[1].tables = createItemTooltip(stages[1]);
 			
 				
 				
-				stages[2] = new Object();
-				stages[2].stats = new Object();
+				stages[2] = new itemSkeleton();
 				stages[2].name = 'Marauder Knife';
 				stages[2].level = 3;
 				stages[2].image = createItemImage(stages[2].name, stages[2].level);
@@ -2789,13 +2587,12 @@ function createItem(string){
 				stages[2].stats.sell = 940;
 				stages[2].stats.attackdamage = 20;
 				stages[2].stats.attacklifesteal = 10;
-				stages[2].effect1 = getItemEffect('marauderburst3');
-				stages[2].effect2 = getItemEffect('marauderedge');
+				stages[2].effects.push(getItemEffect('marauderburst3'));
+				stages[2].effects.push(getItemEffect('marauderedge'));
 				stages[2].tables = createItemTooltip(stages[2]);
 
 		
-				stages[3] = new Object();
-				stages[3].stats = new Object();
+				stages[3] = new itemSkeleton();
 				stages[3].name = 'Marauder Knife';
 				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
@@ -2803,8 +2600,8 @@ function createItem(string){
 				stages[3].stats.sell = 1690;
 				stages[3].stats.attackdamage = 50;
 				stages[3].stats.attacklifesteal = 10;
-				stages[3].effect1 = getItemEffect('marauderburst4');
-				stages[3].effect2 = getItemEffect('marauderedge');
+				stages[3].effects.push(getItemEffect('marauderburst4'));
+				stages[3].effects.push(getItemEffect('marauderedge'));
 				stages[3].tables = createItemTooltip(stages[3]);
 				return stages;
 		//
@@ -2813,8 +2610,7 @@ function createItem(string){
 				
 		case "Nil Weapon":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Nil Weapon";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2822,14 +2618,13 @@ function createItem(string){
 				stages[0].stats.sell = 165;
 				stages[0].stats.health = 75;
 				stages[0].stats.attackdamage = 10;
-				stages[0].effect1 = getItemEffect('attacksyphon');
+				stages[0].effects.push(getItemEffect('attacksyphon'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
 				
 		case "Speed Force Battery":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Speed Force Battery";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
@@ -2839,15 +2634,14 @@ function createItem(string){
 				stages[0].tables = createItemTooltip(stages[0]);	
 								
 								
-				stages[1] = new Object();
-				stages[1].stats = new Object();
+				stages[1] = new itemSkeleton();
 				stages[1].name = "Speed Force Battery";
 				stages[1].level = 2;
 				stages[1].image = createItemImage(stages[1].name, stages[1].level);
 				stages[1].stats.buy = 2750;
 				stages[1].stats.sell = 2065;
 				stages[1].stats.movespeed = 20;
-				stages[1].effect1 = getItemEffect('Blink Jump');
+				stages[1].effects.push(getItemEffect('Blink Jump'));
 				stages[1].tables = createItemTooltip(stages[1]);	
 				
 				
@@ -2855,64 +2649,65 @@ function createItem(string){
 				
 		case "Health Pack":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Health Pack";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 50;
 				stages[0].stats.sell = 25;
-				stages[0].effect1 = getItemEffect('healthpack');
+				stages[0].effects.push(getItemEffect('healthpack'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;				
 				
 		case "Will Pack":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Will Pack";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 50;
 				stages[0].stats.sell = 25;
-				stages[0].effect1 = getItemEffect('willpack');
+				stages[0].effects.push(getItemEffect('willpack'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;			
 				
 		case "Bleed Portal":
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Bleed Portal";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
 				stages[0].stats.sell = 375;
-				stages[0].effect1 = getItemEffect('Bleed Tunneling');
+				stages[0].effects.push(getItemEffect('Bleed Tunneling'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
 				
 		case "Tektite Vial":
 						
-				stages[0] = new Object();
-				stages[0].stats = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "Tektite Vial";
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 250;
 				stages[0].stats.sell = 125;
-				stages[0].effect1 = getItemEffect('Tektite Vial');
+				stages[0].effects.push(getItemEffect('Tektite Vial'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;		
 				
 		case "blank":
-				stages[0] = new Object();
+				stages[0] = new itemSkeleton();
 				stages[0].name = "blank";
 				stages[0].stats = new Object();
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				return stages;
 		}			
-		
+		function itemSkeleton(){
+			var stage = new Object();	
+			stage.stats = new Object();
+			stage.effects = new Array();
+			return stage;
+		}
 }
 
 function createItemHeader(item){
@@ -2984,24 +2779,13 @@ function createItemTooltip(currentitem){
 	header.setAttribute('style', 'width: 100%')
 	var stats = createStatSpan(currentitem.stats, false);
 	
-	//Checks and creates text spans for any item effects
-	if (currentitem.effect1 != undefined ){
+	//Loops through and adds tooltips for each effect
+	for (var i = 0; i < currentitem.effects.length; i++)
+	{
 		var space = document.createElement('br');
-		var effect = createItemEffectSpan(currentitem.effect1, false);
+		var effect = createItemEffectSpan(currentitem.effects[i], false);
 		stats.appendChild(space);
 		stats.appendChild(effect);
-		if (currentitem.effect2 != undefined ){
-			var space2 = document.createElement('br');
-			var effect2 = createItemEffectSpan(currentitem.effect2, false);
-			stats.appendChild(space2);
-			stats.appendChild(effect2);
-			if (currentitem.effect3 != undefined ){
-				var space3 = document.createElement('br');
-				var effect3 = createItemEffectSpan(currentitem.effect3, false);
-				stats.appendChild(space3);
-				stats.appendChild(effect3);
-			}
-		}
 	}
 	var complete = document.createElement('div');	
 	complete.appendChild(header);
@@ -3028,24 +2812,12 @@ function createItemTooltip(currentitem){
 	var condensedStats = createStatSpan(currentitem.stats, true);  
 	
 	//checks for any effects, and lists names of effects if present
-	if (currentitem.effect1 != undefined ){
+	for (var i = 0; i < currentitem.effects.length; i++)
+	{
 		var space = document.createElement('br');
-		var effect = createItemEffectSpan(currentitem.effect1, true);
-		condensedStats.appendChild(effect);
-		if (currentitem.effect2 != undefined ){
-			var space2 = document.createElement('br');
-			var effect2 = createItemEffectSpan(currentitem.effect2, true);
-			condensedStats.appendChild(space2);
-			condensedStats.appendChild(effect2);
-			if (currentitem.effect3 != undefined ){
-				var space3 = document.createElement('br');
-				var effect3 = createItemEffectSpan(currentitem.effect3, true);
-				condensedStats.appendChild(space3);
-				condensedStats.appendChild(effect3);
-			}
-		}
-		
-
+		var effect = createItemEffectSpan(currentitem.effects[i], true);
+		condensedStats.appendChild(effect);	
+		condensedStats.appendChild(space);
 	}
 	var condensedStatsData = document.createElement('td');
 	condensedStatsData.appendChild(condensedStats);
@@ -3372,7 +3144,7 @@ function filter(item){
 
 function checkItemStats(item, statname){
 //Checks for the presence of stats within an item
-
+//REWRITE THIS
 	var match = false;
 	for (var i = 0; i < item.length; i++){
 		if(item[i].stats[statname] != undefined){
@@ -3380,29 +3152,22 @@ function checkItemStats(item, statname){
 		}
 		
 //Checks the effects for items that will affect the sent stat.
-		if (item[i]['effect1'] != undefined){
-			if (item[i].effect1['tags'] != undefined){
-				for (var y = 0; y < item[i].effect1.tags.length; y++){
-					if (item[i].effect1.tags[y] == statname){
-						match = true;
-					}
+		for (var j = 0; j < item[i].effects.length; j++){
+		if (item[i].effects[j]['tags']){
+				for (var y = 0; y < item[i].effects[j].tags.length; y++){
+						if (item[i].effects[j].tags[y] == statname){
+							match = true;
+						}
 				}
 			}
-			
-				if (item[i]['effect2'] != undefined){
-					if (item[i].effect2['tags'] != undefined){
-						for (var y = 0; y < item[i].effect2.tags.length; y++){
-							if (item[i].effect2.tags[y] == statname){
-								match = true;
-							}
-						}
-					}
-				}
 		}
-	}	
+		
+		
+		
+	}
+	return match;
+}	
 
-return match;
-}
 function getCCItemList(){
 //A list of items in Coast City
 //This section should eventually be in a different file once item conversions are done
@@ -3530,6 +3295,11 @@ function getItemEffect(string){
 	var effect = new Object();
 	var text = document.createElement('p');
 	switch(string){
+		case "Iron Will":
+			effect.name = "Iron Will";
+			effect.desc = "Toggle on to redirect 20% of damage taken to your Will instead."
+			effect.type = "Active"; 
+			break;
 		case "Toughness":
 			effect.name = "Toughness";
 			effect.desc = "Blocks 5 damage from Champion basic attacks."
