@@ -1,17 +1,5 @@
 Live version at http://www.mrmanjo.com/foundry
-<<<<<<< Updated upstream
 This will be the final version of this particular foundry. The code is being rewritten from the ground up.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-This will be the final version of this foundry. A rewrite is currently in the works.
-=======
-This will be the final version of this particular foundry. The code is being rewritten from the ground up.
->>>>>>> 397e74156b801d3b1171261befe861b7f6c6f76b
-=======
-This will be the final version of this particular foundry. The code is being rewritten from the ground up.
->>>>>>> 397e74156b801d3b1171261befe861b7f6c6f76b
->>>>>>> Stashed changes
 
 Misc Files:
 ----
