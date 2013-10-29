@@ -1,4 +1,5 @@
-Live version at http://www.mrmanjo.com/beta
+Live version at http://www.mrmanjo.com/foundry
+This will be the final version of this particular foundry. The code is being rewritten from the ground up.
 
 Misc Files:
 ----
