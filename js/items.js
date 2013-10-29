@@ -81,7 +81,7 @@ function createItem(string){
 				stages[3].stats.sell = 2440;
 				stages[3].stats.will = 400;
 				stages[3].stats.willregen = 8;
-				stages[3].stats.powerdamage = 80;
+				stages[3].stats.powerdamage = 70;
 				stages[3].effects.push(getItemEffect('willbattery'));
 				stages[3].effects.push(getItemEffect('willforce'));
 				stages[3].tables = createItemTooltip(stages[3]);
@@ -871,6 +871,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 1500;
+				stages[0].stats.sell = 1125;
 				stages[0].stats.attackdamage = 25;
 				stages[0].stats.attackspeed = 15;
 				stages[0].tables = createItemTooltip(stages[0]);	
@@ -900,7 +901,6 @@ function createItem(string){
 				stages[0].stats.sell = 165;
 				stages[0].stats.health = 125;
 				stages[0].stats.healthregen = 15;
-				stages[0].stats.attackarmor = 15;
 				stages[0].effects.push(getItemEffect('Toughness'));
 				stages[0].tables = createItemTooltip(stages[0]);	
 				return stages;
@@ -952,7 +952,7 @@ function createItem(string){
 				stages[3].stats.powerarmor = 35;
 				stages[3].effects.push(getItemEffect('oaaura'));
 				stages[3].effects.push(getItemEffect('Protection Field'));
-				stages[3].tables = createItemTooltip(stages[2]);
+				stages[3].tables = createItemTooltip(stages[3]);
 				
 				return stages;		
 		//
@@ -1307,7 +1307,7 @@ function createItem(string){
 				
 				stages[3] = new itemSkeleton();
 				stages[3].name = 'Olympus Gambit';
-				stages[3].level = 3;
+				stages[3].level = 4;
 				stages[3].image = createItemImage(stages[3].name, stages[3].level);
 				stages[3].stats.buy = 2250;		
 				stages[3].stats.sell = 1690;			
@@ -1415,7 +1415,7 @@ function createItem(string){
 				stages[0].level = 1;
 				stages[0].image = createItemImage(stages[0].name, stages[0].level);
 				stages[0].stats.buy = 500;
-				stages[0].stats.buy = 450;
+				stages[0].stats.sell = 450;
 				stages[0].stats.health = 100;
 				stages[0].stats.willregen = 2;
 				stages[0].stats.cdr = 5;
@@ -3295,6 +3295,11 @@ function getItemEffect(string){
 	var effect = new Object();
 	var text = document.createElement('p');
 	switch(string){
+		case "marauderdefense":
+			effect.name = "Marauder Defense";
+			effect.desc = "Blocks 5 damage from Creature attacks."
+			effect.type = "Passive"; 
+			break;
 		case "Iron Will":
 			effect.name = "Iron Will";
 			effect.desc = "Toggle on to redirect 20% of damage taken to your Will instead."
@@ -3368,7 +3373,7 @@ function getItemEffect(string){
 		
 		case 'Bastion':
 			effect.name = "Bastion";
-			effect.desc = "Activate to reduce damage taken by 25% and reduce damage dealt by 25% for 3 seconds(60s Cooldown)."
+			effect.desc = "Activate to reduce damage taken by 25% and reduce damage dealt by 25% for 3 seconds(60s Cooldown).";
 			effect.type = "Active"; 
 			break;	
 	
